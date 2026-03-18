@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "import:monster": "python scripts/import_monster_project_dashboard.py",
+    "import:monster:ep1": "python scripts/import_monster_ep01.py",
+    "import:hucun": "python scripts/import_hucun_dashboard.py",
+    "sync:feishu": "node scripts/feishu-sync/index.js --config scripts/feishu-sync/config.local.json",
+    "sync:feishu:validate": "node scripts/feishu-sync/index.js --validate-config --config scripts/feishu-sync/config.example.json",
+    "sync:feishu:tables": "node scripts/feishu-sync/index.js --list-tables --config scripts/feishu-sync/config.local.json"
   },
   "dependencies": {
     "react": "^18.3.1",

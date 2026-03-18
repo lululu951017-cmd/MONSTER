@@ -1,3 +1,10 @@
 node_modules/
 dist/
 .DS_Store
+.tmp/
+.vite-dev.log
+__pycache__/
+*.pyc
+scripts/feishu-sync/config.local.json
+public/studio-sync/*.json
+!public/studio-sync/.gitkeep

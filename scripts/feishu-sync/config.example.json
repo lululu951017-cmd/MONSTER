@@ -1,0 +1,181 @@
+{
+  "project": {
+    "name": "MONSTER",
+    "episodeCount": 1,
+    "targetDeliveryDate": "2026-04-15"
+  },
+  "outputDir": "public/studio-sync",
+  "feishu": {
+    "baseUrl": "https://open.feishu.cn",
+    "appIdEnv": "FEISHU_APP_ID",
+    "appSecretEnv": "FEISHU_APP_SECRET",
+    "appTokenEnv": "FEISHU_BITABLE_APP_TOKEN"
+  },
+  "statusMap": {
+    "未开始": "pending",
+    "进行中": "active",
+    "待审核": "review",
+    "阻塞": "blocked",
+    "已完成": "done"
+  },
+  "tables": {
+    "storyboard": {
+      "tableName": "分镜头脚本",
+      "tableId": "tblyAieRq8DpEYN1",
+      "viewId": "vew1s4zQx6"
+    },
+    "characters": {
+      "tableName": "角色设定图",
+      "tableId": "tblUdUYjv61EZHJ3"
+    },
+    "scenes": {
+      "tableName": "场景图",
+      "tableId": "tblJLA5828IaXEuJ"
+    },
+    "props": {
+      "tableName": "道具图",
+      "tableId": "tblbfGHMzykKzGFw"
+    },
+    "script": {
+      "tableName": "剧本管理",
+      "tableId": "tblHdthQye0vBKc8"
+    }
+  },
+  "stageMappings": {
+    "storyMainline": {
+      "table": "script",
+      "defaultEpisode": 1,
+      "recordMatch": [
+        { "field": ["工序", "类型", "脚本类型"], "equals": "剧本主线梳理" }
+      ],
+      "fields": {
+        "episode": ["集数"],
+        "status": ["状态"],
+        "progress": ["进度"],
+        "outputCount": ["产出数量", "数量"],
+        "assignee": ["负责人", "制作者"],
+        "updatedAt": ["更新时间"],
+        "startedAt": ["开始时间"],
+        "version": ["版本号"],
+        "notes": ["备注"],
+        "blockReason": ["阻塞原因"],
+        "reviewWaitingHours": ["审核等待时长"]
+      }
+    },
+    "episodeOutline": {
+      "table": "script",
+      "defaultEpisode": 1,
+      "recordMatch": [
+        { "field": ["工序", "类型", "脚本类型"], "equals": "分集大纲" }
+      ],
+      "fields": {
+        "episode": ["集数"],
+        "status": ["状态"],
+        "progress": ["进度"],
+        "outputCount": ["产出数量", "数量"],
+        "assignee": ["负责人", "制作者"],
+        "updatedAt": ["更新时间"],
+        "startedAt": ["开始时间"],
+        "version": ["版本号"],
+        "notes": ["备注"],
+        "blockReason": ["阻塞原因"],
+        "reviewWaitingHours": ["审核等待时长"]
+      }
+    },
+    "episodeScript": {
+      "table": "script",
+      "defaultEpisode": 1,
+      "recordMatch": [
+        { "field": ["工序", "类型", "脚本类型"], "equals": "分集剧本" }
+      ],
+      "fields": {
+        "episode": ["集数"],
+        "status": ["状态"],
+        "progress": ["进度"],
+        "outputCount": ["场次数", "产出数量"],
+        "assignee": ["负责人", "制作者"],
+        "updatedAt": ["更新时间"],
+        "startedAt": ["开始时间"],
+        "version": ["版本号"],
+        "notes": ["备注"],
+        "blockReason": ["阻塞原因"],
+        "reviewWaitingHours": ["审核等待时长"]
+      }
+    },
+    "characterDesign": {
+      "table": "characters",
+      "defaultEpisode": 1,
+      "outputMode": "countCompletedRows",
+      "outputTargetMode": "countRecords",
+      "activityFields": ["名称", "角色名", "提示词"],
+      "fields": {
+        "episode": ["集数"],
+        "status": ["状态"],
+        "progress": ["进度"],
+        "assignee": ["负责人", "制作者"],
+        "updatedAt": ["更新时间"],
+        "startedAt": ["开始时间"],
+        "version": ["版本号"],
+        "notes": ["备注"]
+      }
+    },
+    "sceneDesign": {
+      "table": ["scenes", "props"],
+      "defaultEpisode": 1,
+      "outputMode": "countCompletedRows",
+      "outputTargetMode": "countRecords",
+      "activityFields": ["名称", "提示词"],
+      "fields": {
+        "episode": ["集数"],
+        "status": ["状态"],
+        "progress": ["进度"],
+        "assignee": ["负责人", "制作者"],
+        "updatedAt": ["更新时间"],
+        "startedAt": ["开始时间"],
+        "version": ["版本号"],
+        "notes": ["备注"]
+      }
+    },
+    "episodeStoryboard": {
+      "table": "storyboard",
+      "defaultEpisode": 1,
+      "outputMode": "countCompletedRows",
+      "outputTargetMode": "countRecords",
+      "completionField": ["参考画面", "文字描述", "画面描述", "台词"],
+      "activityFields": ["分场", "镜头号", "镜号", "制作者"],
+      "fields": {
+        "status": ["状态"],
+        "assignee": ["制作者", "负责人"],
+        "updatedAt": ["更新时间"],
+        "notes": ["文字描述", "画面描述", "台词"]
+      }
+    },
+    "comicToImage": {
+      "table": "storyboard",
+      "defaultEpisode": 1,
+      "outputMode": "countCompletedRows",
+      "outputTargetMode": "countRecords",
+      "completionField": ["确定画面"],
+      "activityFields": ["参考画面", "制作者"],
+      "fields": {
+        "status": ["状态"],
+        "assignee": ["制作者", "负责人"],
+        "updatedAt": ["更新时间"],
+        "notes": ["文字描述", "画面描述", "台词"]
+      }
+    }
+  },
+  "assetMapping": {
+    "characterTables": ["characters"],
+    "sceneTables": ["scenes"],
+    "propTables": ["props"],
+    "fields": {
+      "id": ["资产ID", "ID"],
+      "name": ["名称", "角色名", "场景名", "道具名"],
+      "status": ["状态"],
+      "designVersion": ["版本号"],
+      "prompt": ["提示词", "文字描述"],
+      "notes": ["备注"]
+    }
+  }
+}

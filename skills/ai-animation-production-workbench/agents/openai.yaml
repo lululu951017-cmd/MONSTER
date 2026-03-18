@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Animation Production Workbench"
+  short_description: "Load project data and manage an AI animation production console."
+  default_prompt: "Use $ai-animation-production-workbench to load project data, assess production health, and update the dashboard."
