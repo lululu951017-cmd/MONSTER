@@ -12,6 +12,12 @@ function getAiStatus(member) {
   return "未启动";
 }
 
+function getStatusDotTone(status) {
+  if (String(status || "").includes("淇")) return "is-danger";
+  if (String(status || "").includes("杩")) return "is-accent";
+  return "is-neutral";
+}
+
 function buildCoreCollab(member) {
   const map = {
     "项目制片人": "编剧 / AI导演 / 分镜导演 / 美术总监 / 技术负责人",
@@ -58,7 +64,7 @@ export default function TeamView({ coreTeam, aiTeam, selectedMember, onSelectMem
           <p>保留制片、编剧、AI 导演、美术、技术和后期统筹的当前任务，用来支撑 6 集项目总控。</p>
         </div>
 
-        <div className="team-reference-grid team-reference-grid-core">
+        <div className="team-reference-grid team-reference-grid-core desktop-only">
           {coreTeam.map((member) => (
             <button
               key={member.name}
@@ -79,6 +85,23 @@ export default function TeamView({ coreTeam, aiTeam, selectedMember, onSelectMem
               <div className="team-reference-card-bottom">
                 <span className={`team-card-priority ${getPriorityTone(member.priority)}`}>{member.priority}</span>
                 <span className="team-card-task">{member.currentTask}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <div className="team-mobile-directory mobile-only">
+          {coreTeam.map((member) => (
+            <button
+              key={`${member.name}-mobile-core`}
+              type="button"
+              className={`team-directory-item ${selectedCore?.name === member.name ? "is-selected" : ""}`}
+              onClick={() => setSelectedCoreName(member.name)}
+            >
+              <span className={`team-status-dot ${getStatusDotTone(member.status)}`} />
+              <div>
+                <strong>{member.name}</strong>
+                <span>{member.role}</span>
               </div>
             </button>
           ))}
@@ -114,7 +137,7 @@ export default function TeamView({ coreTeam, aiTeam, selectedMember, onSelectMem
           <p>这里已经切成多人分配：文戏组、动作组、氛围组、修整组，包含负责镜头、每日目标和今日优先级。</p>
         </div>
 
-        <div className="team-reference-grid team-reference-grid-ai">
+        <div className="team-reference-grid team-reference-grid-ai desktop-only">
           {aiTeam.map((member) => (
             <button
               key={member.name}
@@ -135,6 +158,23 @@ export default function TeamView({ coreTeam, aiTeam, selectedMember, onSelectMem
                 <span>已确认 {member.done}</span>
                 <span>修改中 {member.revision}</span>
                 <span>待制作 {member.pending}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <div className="team-mobile-directory mobile-only">
+          {aiTeam.map((member) => (
+            <button
+              key={`${member.name}-mobile-ai`}
+              type="button"
+              className={`team-directory-item ${selectedMember?.name === member.name ? "is-selected" : ""}`}
+              onClick={() => onSelectMember(member.name)}
+            >
+              <span className={`team-status-dot ${getStatusDotTone(getAiStatus(member))}`} />
+              <div>
+                <strong>{member.name}</strong>
+                <span>{member.group}</span>
               </div>
             </button>
           ))}

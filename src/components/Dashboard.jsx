@@ -8,7 +8,7 @@ import {
   getMemberByName,
   groupPriorities,
 } from "./dashboardModel.js";
-import { OrbiterMark, ViewTab } from "./dashboard/ui.jsx";
+import { BottomNavTab, OrbiterMark, ViewTab } from "./dashboard/ui.jsx";
 import OverviewView from "./dashboard/OverviewView.jsx";
 import TeamView from "./dashboard/TeamView.jsx";
 import PlanView from "./dashboard/PlanView.jsx";
@@ -168,6 +168,18 @@ export default function Dashboard() {
           ) : null}
         </main>
       </div>
+
+      <nav className="dashboard-mobile-nav" aria-label="Mobile navigation">
+        {VIEW_TABS.map((tab) => (
+          <BottomNavTab
+            key={tab.key}
+            isActive={activeView === tab.key}
+            label={tab.label}
+            shortLabel={tab.shortLabel}
+            onClick={() => setActiveView(tab.key)}
+          />
+        ))}
+      </nav>
     </div>
   );
 }

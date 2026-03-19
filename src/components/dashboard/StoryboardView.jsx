@@ -18,6 +18,11 @@ function matchesShot(shot, filterKey) {
   return shot.owner === filterKey || shot.status === filterKey;
 }
 
+function buildShotIssueText(shot) {
+  const base = shot.issueTags.join(" / ");
+  return shot.directorNote ? `${base} · ${shot.directorNote}` : base;
+}
+
 export default function StoryboardView({
   storyboard,
   aiTeam,
@@ -86,10 +91,14 @@ export default function StoryboardView({
               <DataPair label="总镜数" value={`${activeScene.totalShots} 镜`} />
               <DataPair label="原负责人" value={activeScene.originalOwner || "多负责人"} />
               <DataPair label="新分配" value={buildSceneOwnerSummary(activeScene)} />
-              <DataPair label="进度" value={`${activeScene.confirmedShots} / ${activeScene.revisionShots} / ${activeScene.pendingShots}`} meta="完成 / 修改中 / 未开始" />
+              <DataPair
+                label="进度"
+                value={`${activeScene.confirmedShots} / ${activeScene.revisionShots} / ${activeScene.pendingShots}`}
+                meta="完成 / 修改中 / 未开始"
+              />
             </div>
 
-            <div className="compact-table">
+            <div className="compact-table desktop-only">
               <div className="table-head assignment-table">
                 <span>新负责人</span>
                 <span>分组</span>
@@ -114,7 +123,37 @@ export default function StoryboardView({
               </div>
             </div>
 
-            <div className="compact-table">
+            <div className="assignment-mobile-list mobile-only">
+              {activeScene.assignments.map((assignment, index) => (
+                <article key={`${activeScene.sceneId}-assignment-mobile-${index}`} className="mobile-info-card">
+                  <div className="mobile-info-card-head">
+                    <strong>{assignment.owner}</strong>
+                    <span>{assignment.group}</span>
+                  </div>
+                  <div className="mobile-info-card-grid">
+                    <div>
+                      <span>分配</span>
+                      <strong>{assignment.assignedShots}</strong>
+                    </div>
+                    <div>
+                      <span>已确认</span>
+                      <strong>{assignment.confirmed || "-"}</strong>
+                    </div>
+                    <div>
+                      <span>需修改</span>
+                      <strong>{assignment.revision || "-"}</strong>
+                    </div>
+                    <div>
+                      <span>待制作</span>
+                      <strong>{assignment.pending || "-"}</strong>
+                    </div>
+                  </div>
+                  <p>{assignment.note || "-"}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="compact-table desktop-only">
               <div className="table-head storyboard-shot-table-wide">
                 <span>镜头 ID</span>
                 <span>原制作者</span>
@@ -137,10 +176,45 @@ export default function StoryboardView({
                       <StatusBadge value={shot.priority} kind="priority" />
                     </span>
                     <span>{shot.type}</span>
-                    <span>{shot.issueTags.join(" / ")}{shot.directorNote ? ` · ${shot.directorNote}` : ""}</span>
+                    <span>{buildShotIssueText(shot)}</span>
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="storyboard-mobile-shot-list mobile-only">
+              {sceneShots.map((shot) => (
+                <details key={`${activeScene.sceneId}-${shot.sequence}-mobile`} className="shot-mobile-card">
+                  <summary className="shot-mobile-summary">
+                    <div className="shot-mobile-summary-main">
+                      <strong className="mono-text">{shot.shotId}</strong>
+                      <span>{shot.owner}</span>
+                    </div>
+                    <StatusBadge value={shot.status} kind="shot" />
+                  </summary>
+                  <div className="shot-mobile-detail">
+                    <div className="shot-mobile-grid">
+                      <div>
+                        <span>原制作者</span>
+                        <strong>{shot.originalOwner}</strong>
+                      </div>
+                      <div>
+                        <span>新制作者</span>
+                        <strong>{shot.owner}</strong>
+                      </div>
+                      <div>
+                        <span>优先级</span>
+                        <strong>{shot.priority}</strong>
+                      </div>
+                      <div>
+                        <span>类型</span>
+                        <strong>{shot.type}</strong>
+                      </div>
+                    </div>
+                    <p>{buildShotIssueText(shot)}</p>
+                  </div>
+                </details>
+              ))}
             </div>
           </>
         ) : (

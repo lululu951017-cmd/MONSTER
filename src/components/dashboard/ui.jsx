@@ -11,6 +11,16 @@ export function ViewTab({ isActive, label, shortLabel, onClick }) {
   );
 }
 
+export function BottomNavTab({ isActive, label, shortLabel, onClick }) {
+  return (
+    <button type="button" className={`bottom-nav-tab ${isActive ? "is-active" : ""}`} onClick={onClick}>
+      <span className="bottom-nav-dot" />
+      <span className="bottom-nav-icon">{shortLabel}</span>
+      <span className="bottom-nav-label">{label}</span>
+    </button>
+  );
+}
+
 export function OrbiterMark({ tone = "accent", small = false }) {
   return <span className={`orbiter-mark tone-${tone} ${small ? "is-small" : ""}`} aria-hidden="true" />;
 }
