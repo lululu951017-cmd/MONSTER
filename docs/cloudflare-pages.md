@@ -26,11 +26,9 @@ If the project name is already taken in your account, edit:
 GitHub auto deploy:
 
 1. In Cloudflare, create a Pages API token with `Account / Cloudflare Pages / Edit`
-2. Copy your `Account ID`
-3. In GitHub repo secrets, add:
+2. In GitHub repo secrets, add:
    - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
-4. Push to `claude/add-chart-components-Cqdu3`
+3. Push to `claude/add-chart-components-Cqdu3`
 
 Workflow file:
 
