@@ -1,9 +1,6 @@
 name: Deploy Cloudflare Pages
 
 on:
-  push:
-    branches:
-      - claude/add-chart-components-Cqdu3
   workflow_dispatch:
 
 jobs:

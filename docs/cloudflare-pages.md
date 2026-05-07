@@ -1,35 +1,34 @@
-# Cloudflare Pages Deploy
+# Cloudflare Pages 说明
 
-This project is prepared for Cloudflare Pages.
+Cloudflare Pages 当前**不是《怪物制片台》的正式发布链路**。
 
-Project name:
+原因：
 
-- `monster-production-hub-951017`
+- 本地 Wrangler OAuth 刷新失败
+- GitHub Actions 里的 Cloudflare 自动部署长期失败
+- 当前团队已经切换到 **Vercel Git 自动部署** 作为正式方案
 
-Commands:
+## 当前正式方案
 
-- Create project: `npm run cf:project:create`
-- Deploy current build: `npm run cf:deploy`
-- Preview with Pages runtime: `npm run cf:dev`
+请改看：
 
-First-time setup:
+- [publish-vercel.md](E:/MONSTER/docs/publish-vercel.md)
 
-1. Run `npx wrangler login`
-2. Run `npm run cf:project:create`
-3. Run `npm run cf:deploy`
+## 这个文件保留的意义
 
-If the project name is already taken in your account, edit:
+仅用于以后重新排查 Cloudflare 时参考。
 
-- `wrangler.toml`
-- `package.json`
+## 如果未来要重新启用 Cloudflare
 
-GitHub auto deploy:
+至少需要先补齐：
 
-1. In Cloudflare, create a Pages API token with `Account / Cloudflare Pages / Edit`
-2. In GitHub repo secrets, add:
+1. 一个可用的 `CLOUDFLARE_API_TOKEN`
+2. GitHub 仓库 Secret：
    - `CLOUDFLARE_API_TOKEN`
-3. Push to `claude/add-chart-components-Cqdu3`
+3. 重新验证工作流：
+   - `.github/workflows/deploy-cloudflare-pages.yml`
 
-Workflow file:
+## 当前建议
 
-- `.github/workflows/deploy-cloudflare-pages.yml`
+不要把 Cloudflare 作为日常更新入口。  
+日常发布请直接使用 Vercel 正式链路。

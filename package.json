@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "release:prepare": "npm run sync:feishu:monster && npm run build",
     "cf:dev": "npx wrangler pages dev dist",
     "cf:project:create": "npx wrangler pages project create monster-production-hub-951017 --production-branch claude/add-chart-components-Cqdu3",
     "cf:deploy": "npm run build && npx wrangler pages deploy dist --project-name monster-production-hub-951017 --branch claude/add-chart-components-Cqdu3",
