@@ -1,235 +1,250 @@
 import React, { useMemo, useState } from "react";
+import { DataPair, ProgressBar, StatusBadge } from "./ui.jsx";
 
-function getPriorityTone(priority) {
-  if (priority === "P0") return "is-p0";
-  if (priority === "P1") return "is-p1";
-  return "is-p2";
+function getAiStatusMeta(member) {
+  if ((member?.revision ?? 0) > 0) {
+    return { label: "返修中", tone: "danger", dot: "danger" };
+  }
+  if ((member?.pending ?? 0) > 0 || (member?.done ?? 0) > 0) {
+    return { label: "进行中", tone: "warning", dot: "good" };
+  }
+  return { label: "未启动", tone: "neutral", dot: "neutral" };
 }
 
-function getAiStatus(member) {
-  if (member.revision > 0) return "返修中";
-  if (member.pending > 0 || member.done > 0) return "进行中";
-  return "未启动";
-}
-
-function getStatusDotTone(status) {
-  if (String(status || "").includes("淇")) return "is-danger";
-  if (String(status || "").includes("杩")) return "is-accent";
-  return "is-neutral";
+function getProgressTone(member) {
+  if ((member?.revision ?? 0) > 0) return "danger";
+  if ((member?.pending ?? 0) > (member?.done ?? 0)) return "warning";
+  return "good";
 }
 
 function buildCoreCollab(member) {
   const map = {
-    "项目制片人": "编剧 / AI导演 / 分镜导演 / 美术总监 / 技术负责人",
-    编剧: "项目制片人 / 世界观设定 / 分镜导演",
-    世界观设定: "编剧 / 美术总监 / 技术负责人",
-    AI导演: "项目制片人 / 分镜导演 / 美术总监",
-    分镜导演: "编剧 / AI导演 / AI 制作团队",
-    美术总监: "世界观设定 / 技术负责人 / AI 制作团队",
-    技术负责人: "AI导演 / 美术总监 / 模型资产 / LORA风格",
-    "后期及声音统筹": "项目制片人 / 技术负责人 / 成片制作",
+    项目制片人: "编剧、分镜导演、AI 导演、美术、技术与后期",
+    编剧: "项目制片人、世界观设定、分镜导演",
+    世界观设定: "编剧、美术总监、技术负责人",
+    AI导演: "项目制片人、分镜导演、美术总监",
+    分镜导演: "编剧、AI 导演、AI 制作团队",
+    美术总监: "世界观设定、技术负责人、资产设计组",
+    技术负责人: "AI 导演、美术总监、模型资产、LORA 风格",
+    后期及声音统筹: "项目制片人、技术负责人、成片制作",
   };
 
-  return map[member.role] ?? member.responsibility ?? "待补充";
+  return map[member?.role] ?? member?.responsibility ?? "待补充";
 }
 
-function buildTodayFocus(member) {
-  if (member.todayP0) return member.todayP0;
-  if (member.todayP1) return member.todayP1;
-  if (member.revision > 0) return `优先处理 ${member.revision} 镜返修`;
-  if (member.pending > 0) return `优先推进 ${Math.min(member.dailyTarget, member.pending)} 镜待制作`;
-  return "维持当前完成节奏";
+function buildWeeklyTargetLabel(member) {
+  if (member?.weeklyGoal) return member.weeklyGoal;
+  return "本周目标待补充";
 }
 
-function buildWeeklyTarget(member) {
-  return `${Math.min(member.remainingWorkload, member.dailyTarget * 5)} 镜`;
+function buildCoverageCount(member) {
+  return Array.isArray(member?.sceneCoverage) ? member.sceneCoverage.length : 0;
 }
 
-export default function TeamView({ coreTeam, aiTeam, selectedMember, onSelectMember }) {
-  const [selectedCoreName, setSelectedCoreName] = useState(coreTeam[0]?.name ?? "");
+export default function TeamView({ coreTeam = [], aiTeam = [], selectedMember, onSelectMember }) {
+  const [selectedCoreName, setSelectedCoreName] = useState(coreTeam?.[0]?.name ?? "");
 
   const selectedCore = useMemo(
-    () => coreTeam.find((member) => member.name === selectedCoreName) ?? coreTeam[0],
+    () => coreTeam.find((member) => member.name === selectedCoreName) ?? coreTeam[0] ?? null,
     [coreTeam, selectedCoreName],
   );
 
+  const selectedAiMember = selectedMember ?? aiTeam[0] ?? null;
+  const selectedAiStatus = getAiStatusMeta(selectedAiMember);
+  const progressTone = getProgressTone(selectedAiMember);
+  const weeklyGoalText = buildWeeklyTargetLabel(selectedAiMember);
+  const sceneCoverageCount = buildCoverageCount(selectedAiMember);
+  const compareDailyPercent = selectedAiMember
+    ? Math.min(100, Math.round(((selectedAiMember.done ?? 0) / Math.max(1, selectedAiMember.dailyTarget ?? 1)) * 100))
+    : 0;
+  const compareWeeklyPercent = selectedAiMember
+    ? Math.min(
+        100,
+        Math.round(((selectedAiMember.done + selectedAiMember.revision) / Math.max(1, selectedAiMember.assignedShots ?? 1)) * 100),
+      )
+    : 0;
+
   return (
-    <section className="project-view-stack team-reference-page">
-      <section className="section-card section-card-airy team-reference-section">
-        <div className="section-head team-reference-head">
-          <div>
-            <span className="section-kicker">团队分工</span>
-            <h2>核心管理团队 8 人</h2>
-          </div>
-          <p>保留制片、编剧、AI 导演、美术、技术和后期统筹的当前任务，用来支撑 6 集项目总控。</p>
-        </div>
-
-        <div className="team-reference-grid team-reference-grid-core desktop-only">
-          {coreTeam.map((member) => (
-            <button
-              key={member.name}
-              type="button"
-              className={`team-reference-card ${selectedCore?.name === member.name ? "is-selected" : ""}`}
-              onClick={() => setSelectedCoreName(member.name)}
-            >
-              <div className="team-reference-card-top">
-                <div>
-                  <strong>{member.name}</strong>
-                  <span>{member.role}</span>
-                </div>
-                <span className="team-card-status">{member.status}</span>
-              </div>
-
-              <p className="team-reference-copy">{member.responsibility}</p>
-
-              <div className="team-reference-card-bottom">
-                <span className={`team-card-priority ${getPriorityTone(member.priority)}`}>{member.priority}</span>
-                <span className="team-card-task">{member.currentTask}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <div className="team-mobile-directory mobile-only">
-          {coreTeam.map((member) => (
-            <button
-              key={`${member.name}-mobile-core`}
-              type="button"
-              className={`team-directory-item ${selectedCore?.name === member.name ? "is-selected" : ""}`}
-              onClick={() => setSelectedCoreName(member.name)}
-            >
-              <span className={`team-status-dot ${getStatusDotTone(member.status)}`} />
-              <div>
-                <strong>{member.name}</strong>
-                <span>{member.role}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        {selectedCore ? (
-          <section className="team-detail-panel">
-            <div className="team-detail-panel-head">
-              <span className="section-kicker">CORE DETAIL</span>
-              <strong>{selectedCore.name}</strong>
+    <section className="project-view-stack team-shell">
+      {coreTeam.length ? (
+        <section className="section-card section-card-airy team-core-section">
+          <div className="section-head team-section-head">
+            <div>
+              <span className="section-kicker">TEAM LEAD</span>
+              <h2>核心管理团队 {coreTeam.length} 人</h2>
             </div>
+            <p>保留制片、编剧、AI 导演、美术、技术和后期统筹的当前任务，用来支撑全局把控。</p>
+          </div>
 
-            <div className="team-detail-panel-grid team-detail-panel-grid-core">
-              <article className="team-detail-block">
+          <div className="team-core-grid">
+            {coreTeam.map((member) => (
+              <button
+                key={member.name}
+                type="button"
+                className={`team-core-card ${selectedCore?.name === member.name ? "is-selected" : ""}`}
+                onClick={() => setSelectedCoreName(member.name)}
+              >
+                <div className="team-core-card-head">
+                  <div>
+                    <strong>{member.name}</strong>
+                    <span>{member.role}</span>
+                  </div>
+                  <StatusBadge value={member.status || "进行中"} />
+                </div>
+
+                <p>{member.responsibility}</p>
+
+                <div className="team-core-card-foot">
+                  <StatusBadge value={member.priority || "P1"} kind="priority" />
+                  <span>{member.currentTask}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {selectedCore ? (
+            <div className="team-core-detail-plain">
+              <div className="team-plain-block">
                 <span>当前主攻节点</span>
                 <strong>{selectedCore.currentTask}</strong>
-              </article>
-              <article className="team-detail-block">
+              </div>
+              <div className="team-plain-block">
                 <span>关键协同</span>
-                <p>{buildCoreCollab(selectedCore)}</p>
-              </article>
+                <strong>{buildCoreCollab(selectedCore)}</strong>
+              </div>
             </div>
-          </section>
-        ) : null}
-      </section>
+          ) : null}
+        </section>
+      ) : null}
 
-      <section className="section-card section-card-airy team-reference-section">
-        <div className="section-head team-reference-head">
+      <section className="section-card section-card-airy team-ai-section">
+        <div className="section-head team-section-head">
           <div>
-            <span className="section-kicker">镜头重新分配方案</span>
-            <h2>10 人制作组每日任务量</h2>
+            <span className="section-kicker">EXECUTION DESK</span>
+            <h2>AI 制作团队</h2>
           </div>
-          <p>这里已经切成多人分配：文戏组、动作组、氛围组、修整组，包含负责镜头、每日目标和今日优先级。</p>
+          <p>左侧选择成员，右侧查看执行看板、目标差距和当日预警，保持一眼能看懂的管理视角。</p>
         </div>
 
-        <div className="team-reference-grid team-reference-grid-ai desktop-only">
-          {aiTeam.map((member) => (
-            <button
-              key={member.name}
-              type="button"
-              className={`team-reference-card ${selectedMember?.name === member.name ? "is-selected" : ""}`}
-              onClick={() => onSelectMember(member.name)}
-            >
-              <div className="team-reference-card-top">
+        <div className="team-workspace-grid">
+          <aside className="team-member-sidebar">
+            {aiTeam.map((member) => {
+              const statusMeta = getAiStatusMeta(member);
+
+              return (
+                <button
+                  key={member.name}
+                  type="button"
+                  className={`team-member-card ${selectedAiMember?.name === member.name ? "is-selected" : ""}`}
+                  onClick={() => onSelectMember(member.name)}
+                >
+                  <span className={`team-member-status-dot tone-${statusMeta.dot}`} />
+                  <span className="team-member-avatar">{member.name?.slice(0, 1) || "人"}</span>
+                  <div className="team-member-copy">
+                    <strong>{member.name}</strong>
+                    <small>{member.group}</small>
+                  </div>
+                </button>
+              );
+            })}
+          </aside>
+
+          {selectedAiMember ? (
+            <article className="team-member-panel">
+              <div className="team-member-panel-head">
                 <div>
-                  <strong>{member.name}</strong>
-                  <span>{member.group}</span>
+                  <span className="section-kicker">MEMBER DETAIL</span>
+                  <h3>{selectedAiMember.name} 的执行详情</h3>
                 </div>
-                <span className={`team-card-priority ${getPriorityTone(member.todayPriority)}`}>{member.todayPriority}</span>
+                <StatusBadge value={selectedAiStatus.label} />
               </div>
 
-              <div className="team-ai-summary">
-                <span>负责 {member.assignedShots} 镜</span>
-                <span>已确认 {member.done}</span>
-                <span>修改中 {member.revision}</span>
-                <span>待制作 {member.pending}</span>
+              <div className="team-kpi-grid">
+                <div className="team-kpi-primary">
+                  <span>剩余工作量</span>
+                  <strong>{selectedAiMember.remainingWorkload} 镜</strong>
+                  <small>当前仍需推进的镜头数量</small>
+                </div>
+
+                <div className="team-kpi-primary">
+                  <span>进度百分比</span>
+                  <strong>{selectedAiMember.progress}%</strong>
+                  <small>已确认 + 返修 / 总负责镜头</small>
+                </div>
               </div>
-            </button>
-          ))}
+
+              <div className="team-kpi-secondary-grid">
+                <DataPair label="已确认" value={`${selectedAiMember.done}`} meta="当前已完成镜头" />
+                <DataPair label="返修中" value={`${selectedAiMember.revision}`} meta="需要优先收口" />
+                <DataPair label="待制作" value={`${selectedAiMember.pending}`} meta="尚未开工镜头" />
+                <DataPair label="日目标" value={`${selectedAiMember.dailyTarget} 镜`} meta={`预计 ${selectedAiMember.estimatedDays} 天`} />
+              </div>
+
+              <div className="team-detail-module-grid">
+                <section className="team-detail-module">
+                  <div className="team-detail-module-head">
+                    <strong>目标对比</strong>
+                    <span>{weeklyGoalText}</span>
+                  </div>
+
+                  <div className="team-compare-stack">
+                    <div className="team-compare-row">
+                      <div className="team-compare-copy">
+                        <strong>当前进度</strong>
+                        <small>{selectedAiMember.done + selectedAiMember.revision}/{selectedAiMember.assignedShots} 镜</small>
+                      </div>
+                      <ProgressBar value={selectedAiMember.progress} tone={progressTone} />
+                    </div>
+
+                    <div className="team-compare-row">
+                      <div className="team-compare-copy">
+                        <strong>日目标达成</strong>
+                        <small>{selectedAiMember.done}/{selectedAiMember.dailyTarget} 镜</small>
+                      </div>
+                      <ProgressBar value={compareDailyPercent} tone={selectedAiMember.done >= selectedAiMember.dailyTarget ? "good" : "warning"} />
+                    </div>
+
+                    <div className="team-compare-metrics">
+                      <div className="team-compare-metric">
+                        <span>负责镜头</span>
+                        <strong>{selectedAiMember.assignedShots}</strong>
+                      </div>
+                      <div className="team-compare-metric">
+                        <span>涉及场次</span>
+                        <strong>{sceneCoverageCount}</strong>
+                      </div>
+                      <div className="team-compare-metric">
+                        <span>本周推进</span>
+                        <strong>{compareWeeklyPercent}%</strong>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="team-detail-module team-detail-module-alerts">
+                  <div className="team-detail-module-head">
+                    <strong>预警区</strong>
+                    <span>把最需要盯的点单独拉出来</span>
+                  </div>
+
+                  <div className="team-alert-grid">
+                    <article className="team-alert-card tone-soft-danger">
+                      <span>今日重点</span>
+                      <strong>{selectedAiMember.todayP0 || selectedAiMember.todayP1 || "今日暂无重点"}</strong>
+                      <small>{selectedAiMember.priorityNote || "任务备注待同步"}</small>
+                    </article>
+
+                    <article className="team-alert-card tone-soft-warning">
+                      <span>当前风险</span>
+                      <strong>⚠ {selectedAiMember.riskNote || "暂无明显风险"}</strong>
+                      <small>{selectedAiMember.remark || "当前无额外备注"}</small>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </article>
+          ) : null}
         </div>
-
-        <div className="team-mobile-directory mobile-only">
-          {aiTeam.map((member) => (
-            <button
-              key={`${member.name}-mobile-ai`}
-              type="button"
-              className={`team-directory-item ${selectedMember?.name === member.name ? "is-selected" : ""}`}
-              onClick={() => onSelectMember(member.name)}
-            >
-              <span className={`team-status-dot ${getStatusDotTone(getAiStatus(member))}`} />
-              <div>
-                <strong>{member.name}</strong>
-                <span>{member.group}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        {selectedMember ? (
-          <section className="team-detail-panel">
-            <div className="team-detail-panel-head">
-              <span className="section-kicker">MEMBER DETAIL</span>
-              <strong>{selectedMember.name} 的执行详情</strong>
-            </div>
-
-            <div className="team-detail-panel-grid team-detail-panel-grid-ai">
-              <article className="team-detail-kpi">
-                <span>负责镜头</span>
-                <strong>{selectedMember.assignedShots}</strong>
-                <small>镜</small>
-              </article>
-              <article className="team-detail-kpi team-detail-kpi-wide">
-                <span>已确认 / 修改中 / 待制作</span>
-                <strong>
-                  {selectedMember.done}/{selectedMember.revision}/{selectedMember.pending}
-                </strong>
-                <small>核心推进面</small>
-              </article>
-              <article className="team-detail-kpi">
-                <span>剩余工作量</span>
-                <strong>{selectedMember.remainingWorkload}</strong>
-                <small>镜</small>
-              </article>
-              <article className="team-detail-kpi">
-                <span>每日目标</span>
-                <strong>{selectedMember.dailyTarget}</strong>
-                <small>镜 / 日</small>
-              </article>
-            </div>
-
-            <div className="team-detail-alert">⚠️ {selectedMember.riskNote || "当前无新增风险"}</div>
-
-            <div className="team-detail-panel-grid team-detail-panel-grid-triple">
-              <article className="team-detail-block">
-                <span>今日重点</span>
-                <strong>{buildTodayFocus(selectedMember)}</strong>
-              </article>
-              <article className="team-detail-block">
-                <span>本周推进</span>
-                <strong>{buildWeeklyTarget(selectedMember)}</strong>
-              </article>
-              <article className="team-detail-block">
-                <span>当前状态</span>
-                <strong>{getAiStatus(selectedMember)}</strong>
-              </article>
-            </div>
-          </section>
-        ) : null}
       </section>
     </section>
   );

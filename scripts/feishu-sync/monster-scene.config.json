@@ -1,0 +1,59 @@
+{
+  "projectName": "怪物",
+  "baseId": "Dz9NbyUUnadgGYssuaNchAasngd",
+  "outputPath": "public/monsterProjectDashboard.runtime.json",
+  "tables": {
+    "storyboardScenes": {
+      "tableId": "tbl94EBVAZI6RmBh",
+      "tableName": "第一集定场图"
+    },
+    "characterAssets": {
+      "tableId": "tblIyQAVpBYX4Jql",
+      "tableName": "人物资产"
+    },
+    "sceneAssets": {
+      "tableId": "tblYtDNe3GgTibR5",
+      "tableName": "场景资产"
+    },
+    "propAssets": {
+      "tableId": "tblPWj3eYvKnidfB",
+      "tableName": "道具资产"
+    }
+  },
+  "fieldCandidates": {
+    "storyboardScenes": {
+      "sceneName": ["场次"],
+      "scriptContent": ["对应剧本内容"],
+      "sceneStatus": ["定场图制作状态"],
+      "imageOwner": ["图片制作分配"],
+      "level": ["等级"],
+      "imageDoneAt": ["图片完成时间"],
+      "videoOwner": ["视频制作分配"],
+      "videoDoneAt": ["视频完成时间"]
+    },
+    "sceneAssets": {
+      "primaryName": ["主要场景"],
+      "secondaryName": ["衍生场景"],
+      "sceneRef": ["参与场次"],
+      "mood": ["氛围"],
+      "description": ["环境描述"],
+      "owner": ["制作者", "负责人"],
+      "status": ["状态", "制作状态", "完成状态"],
+      "category": ["资产类型", "分类", "场景类型"]
+    },
+    "characterAssets": {
+      "name": ["人物名称", "角色名称", "名称"],
+      "owner": ["制作者", "负责人"],
+      "status": ["状态", "制作状态", "完成状态"],
+      "category": ["角色类型", "资产类型", "分类"],
+      "description": ["人物描述", "备注", "设定说明"]
+    },
+    "propAssets": {
+      "name": ["道具名称", "名称"],
+      "owner": ["制作者", "负责人"],
+      "status": ["状态", "制作状态", "完成状态"],
+      "category": ["道具类型", "资产类型", "分类"],
+      "description": ["道具描述", "备注"]
+    }
+  }
+}

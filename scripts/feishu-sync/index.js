@@ -11,6 +11,7 @@ const ROOT_DIR = path.resolve(__dirname, "../..");
 const DEFAULT_CONFIG_PATH = "scripts/feishu-sync/config.local.json";
 const DEFAULT_EXAMPLE_PATH = "scripts/feishu-sync/config.example.json";
 const DEFAULT_OUTPUT_DIR = "public/studio-sync";
+const DEFAULT_ENV_PATH = ".env.local";
 
 function parseArgs(argv) {
   const args = {
@@ -58,6 +59,39 @@ Options:
 
 function resolveFromRoot(targetPath) {
   return path.isAbsolute(targetPath) ? targetPath : path.resolve(ROOT_DIR, targetPath);
+}
+
+async function loadLocalEnvFile(filePath = DEFAULT_ENV_PATH) {
+  const absolutePath = resolveFromRoot(filePath);
+
+  try {
+    const raw = await fs.readFile(absolutePath, "utf8");
+    raw.split(/\r?\n/).forEach((line) => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) return;
+
+      const separatorIndex = trimmed.indexOf("=");
+      if (separatorIndex <= 0) return;
+
+      const key = trimmed.slice(0, separatorIndex).trim();
+      let value = trimmed.slice(separatorIndex + 1).trim();
+
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+
+      if (!process.env[key]) {
+        process.env[key] = value;
+      }
+    });
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error;
+    }
+  }
 }
 
 async function loadJsonFile(filePath) {
@@ -696,6 +730,8 @@ async function main() {
     printHelp();
     return;
   }
+
+  await loadLocalEnvFile();
 
   let config;
   try {

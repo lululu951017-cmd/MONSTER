@@ -3,6 +3,7 @@ dist/
 .DS_Store
 .tmp/
 .vite-dev.log
+.env.local
 __pycache__/
 *.pyc
 scripts/feishu-sync/config.local.json

@@ -3,17 +3,17 @@ import baseData from "../data/monsterProjectDashboard.json";
 export { baseData };
 
 export const STATUS_META = {
-  "进行中": { label: "进行中", tone: "warning" },
-  "准备中": { label: "准备中", tone: "neutral" },
-  "未开始": { label: "未开始", tone: "danger" },
-  "基本完成": { label: "基本完成", tone: "good" },
-  "完成": { label: "完成", tone: "good" },
-  "关注中": { label: "关注中", tone: "warning" },
-  "监控中": { label: "监控中", tone: "neutral" },
-  "紧急": { label: "紧急", tone: "danger" },
-  "待观察": { label: "待观察", tone: "neutral" },
-  "大纲中": { label: "大纲中", tone: "neutral" },
-  "主线梳理中": { label: "主线梳理中", tone: "warning" },
+  进行中: { label: "进行中", tone: "warning" },
+  准备中: { label: "准备中", tone: "neutral" },
+  未开始: { label: "未开始", tone: "danger" },
+  基本完成: { label: "基本完成", tone: "good" },
+  完成: { label: "完成", tone: "good" },
+  关注中: { label: "关注中", tone: "warning" },
+  监控中: { label: "监控中", tone: "neutral" },
+  紧急: { label: "紧急", tone: "danger" },
+  待观察: { label: "待观察", tone: "neutral" },
+  大纲中: { label: "大纲中", tone: "neutral" },
+  主线梳理中: { label: "主线梳理中", tone: "warning" },
 };
 
 export const PRIORITY_META = {
@@ -48,7 +48,7 @@ export function getShotStatusMeta(label) {
 }
 
 export function summarizeStoryboardShots(data = baseData) {
-  return data.storyboard.scenes.reduce(
+  return (data.storyboard?.scenes ?? []).reduce(
     (summary, scene) => {
       summary.done += scene.confirmedShots ?? 0;
       summary.revision += scene.revisionShots ?? 0;
@@ -60,128 +60,112 @@ export function summarizeStoryboardShots(data = baseData) {
   );
 }
 
-export function buildHealthStatus(data = baseData) {
-  const shotSummary = summarizeStoryboardShots(data);
-  const urgentRiskCount = data.risks.filter((risk) => risk.status === "紧急").length;
-  const loadList = data.aiTeam
-    .filter((member) => member.name !== "张叶湘")
-    .map((member) => member.remainingWorkload);
-  const maxLoad = Math.max(...loadList, 0);
-  const minLoad = Math.min(...loadList, maxLoad);
-  const activeScenes = data.storyboard.scenes.filter((scene) => (scene.pendingShots ?? 0) + (scene.revisionShots ?? 0) > 0).length;
-  const triggers = [];
-  let score = 0;
-
-  if ((data.project.scriptProgress ?? "").includes("主线梳理")) {
-    score += 2;
-    triggers.push("剧本仍停留在主线梳理");
-  } else if ((data.project.scriptProgress ?? "").includes("大纲")) {
-    score += 1;
-    triggers.push("剧本仅推进到大纲阶段");
+function parseDateLike(value) {
+  if (!value) return null;
+  const numeric = Number(value);
+  if (Number.isFinite(numeric) && numeric > 0) {
+    const fromTimestamp = new Date(numeric);
+    if (!Number.isNaN(fromTimestamp.getTime())) return fromTimestamp;
   }
 
-  if ((data.project.assetCompleted ?? 0) < 40) {
-    score += 2;
-    triggers.push("资产完成数低于 40");
-  } else if ((data.project.assetCompleted ?? 0) < 60) {
-    score += 1;
-    triggers.push("资产完成数尚未达到 60");
-  }
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
 
-  if (shotSummary.revision > 30) {
-    score += 2;
-    triggers.push("返修镜头超过 30");
-  } else if (shotSummary.revision > 10) {
-    score += 1;
-    triggers.push("返修镜头超过 10");
-  }
+function startOfDay(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
 
-  if (shotSummary.pending > 180) {
-    score += 2;
-    triggers.push("待制作镜头超过 180");
-  } else if (shotSummary.pending > 120) {
-    score += 1;
-    triggers.push("待制作镜头超过 120");
-  }
+function formatMonthDay(date) {
+  return `${String(date.getMonth() + 1).padStart(2, "0")}/${String(date.getDate()).padStart(2, "0")}`;
+}
 
-  if (urgentRiskCount >= 2) {
-    score += 2;
-    triggers.push("存在 2 项以上紧急风险");
-  } else if (urgentRiskCount >= 1) {
-    score += 1;
-    triggers.push("存在紧急风险");
-  }
+function buildProgressHistory(data = baseData) {
+  const sceneRows = data.storyboard?.sceneRows ?? [];
+  const completedDates = sceneRows
+    .filter((row) => String(row.sceneStatus ?? "").includes("完成"))
+    .map((row) => parseDateLike(row.imageDoneAt) || parseDateLike(row.videoDoneAt))
+    .filter(Boolean)
+    .map((date) => startOfDay(date));
 
-  if (maxLoad - minLoad > 15) {
-    score += 1;
-    triggers.push("成员负载差超过 15 镜");
-  }
+  const today = startOfDay(new Date());
+  const latestDate =
+    completedDates.length > 0
+      ? new Date(Math.max(today.getTime(), ...completedDates.map((date) => date.getTime())))
+      : today;
 
-  if (activeScenes > 8) {
-    score += 1;
-    triggers.push("同时活跃场次超过 8 场");
-  }
+  const days = Array.from({ length: 7 }, (_, index) => {
+    const date = new Date(latestDate);
+    date.setDate(latestDate.getDate() - (6 - index));
+    return startOfDay(date);
+  });
 
-  if (score >= 6) {
+  const byDay = new Map();
+  completedDates.forEach((date) => {
+    const key = startOfDay(date).getTime();
+    byDay.set(key, (byDay.get(key) ?? 0) + 1);
+  });
+
+  let cumulative = 0;
+  return days.map((date) => {
+    const key = date.getTime();
+    const completed = byDay.get(key) ?? 0;
+    cumulative += completed;
     return {
-      label: "红灯",
-      tone: "danger",
-      note: triggers.slice(0, 2).join(" · "),
-      triggers,
-      score,
+      label: formatMonthDay(date),
+      completed,
+      cumulative,
+      percent: percent(cumulative, data.project?.totalStoryboards ?? 0),
     };
-  }
-
-  if (score >= 3) {
-    return {
-      label: "黄灯",
-      tone: "warning",
-      note: triggers.slice(0, 2).join(" · "),
-      triggers,
-      score,
-    };
-  }
-
-  return {
-    label: "绿灯",
-    tone: "good",
-    note: triggers[0] || "当前关键阈值均在健康区间",
-    triggers,
-    score,
-  };
+  });
 }
 
 export function buildProjectStats(data = baseData) {
   const shotSummary = summarizeStoryboardShots(data);
-  const revision = shotSummary.revision;
-  const pending = shotSummary.pending;
-  const done = data.episodes.reduce((sum, item) => sum + item.done, 0);
+  const progressHistory = buildProgressHistory(data);
+  const yesterday = progressHistory.at(-2);
+  const todayPoint = progressHistory.at(-1);
+  const yesterdayDeltaShots = Math.max(0, (todayPoint?.cumulative ?? 0) - (yesterday?.cumulative ?? 0));
+  const yesterdayDeltaPercent = Number(((todayPoint?.percent ?? 0) - (yesterday?.percent ?? 0)).toFixed(1));
+  const teamDailyTarget = (data.aiTeam ?? []).reduce((sum, item) => sum + (item.dailyTarget ?? 0), 0);
+  const remainingShots = Math.max(0, (data.project?.totalStoryboards ?? 0) - (data.project?.completedStoryboards ?? 0));
+  const estimatedDays = teamDailyTarget > 0 ? Math.ceil(remainingShots / teamDailyTarget) : 0;
+  const estimatedCompletionDate = (() => {
+    if (!estimatedDays) return "";
+    const date = new Date();
+    date.setDate(date.getDate() + estimatedDays);
+    return `${date.getMonth() + 1}月${date.getDate()}日`;
+  })();
 
   return {
-    totalEpisodes: data.project.episodeCount,
-    totalShots: data.project.totalStoryboards,
-    doneShots: data.project.completedStoryboards,
-    revisionShots: revision,
-    pendingShots: pending,
-    episodeOneProgress: percent(data.episodes[0]?.done ?? 0, data.episodes[0]?.totalShots ?? 0),
-    assetProgress: percent(data.project.assetCompleted, data.project.assetTotal),
-    teamDailyTarget: data.aiTeam.reduce((sum, item) => sum + item.dailyTarget, 0),
-    aiTrackedShots: data.storyboard.trackedShots,
-    completedAssets: data.project.assetCompleted,
-    health: buildHealthStatus(data),
-    currentPhase: data.project.currentStage,
-    scriptStage: data.project.scriptProgress,
-    allDoneShots: done,
+    totalEpisodes: data.project?.episodeCount ?? 0,
+    totalShots: data.project?.totalStoryboards ?? 0,
+    doneShots: data.project?.completedStoryboards ?? 0,
+    revisionShots: shotSummary.revision,
+    pendingShots: shotSummary.pending,
+    episodeOneProgress: percent(data.episodes?.[0]?.done ?? 0, data.episodes?.[0]?.totalShots ?? 0),
+    assetProgress: percent(data.project?.assetCompleted ?? 0, data.project?.assetTotal ?? 0),
+    teamDailyTarget,
+    aiTrackedShots: data.storyboard?.trackedShots ?? data.project?.trackedShots ?? 0,
+    completedAssets: data.project?.assetCompleted ?? 0,
+    currentPhase: data.project?.currentStage ?? "",
+    scriptStage: data.project?.scriptProgress ?? "",
+    remainingShots,
+    estimatedDays,
+    estimatedCompletionDate,
+    yesterdayDeltaShots,
+    yesterdayDeltaPercent,
+    progressHistory,
     shotSummary,
   };
 }
 
 export function buildEpisodeColorMap(data = baseData) {
-  return Object.fromEntries(data.episodes.map((episode) => [episode.episode, episode.color]));
+  return Object.fromEntries((data.episodes ?? []).map((episode) => [episode.episode, episode.color]));
 }
 
 export function groupPriorities(data = baseData) {
-  return data.priorities.reduce(
+  return (data.priorities ?? []).reduce(
     (accumulator, item) => {
       const key = String(item.priority ?? "").startsWith("P0")
         ? "P0"
@@ -197,32 +181,31 @@ export function groupPriorities(data = baseData) {
 
 export function buildRiskSummary(data = baseData) {
   return {
-    high: data.risks.filter((risk) => risk.impact === "高").length,
-    medium: data.risks.filter((risk) => risk.impact === "中").length,
-    urgent: data.risks.filter((risk) => risk.status === "紧急").length,
+    high: (data.risks ?? []).filter((risk) => risk.impact === "高").length,
+    medium: (data.risks ?? []).filter((risk) => risk.impact === "中").length,
+    urgent: (data.risks ?? []).filter((risk) => risk.status === "紧急").length,
   };
 }
 
 export function getMemberByName(name, data = baseData) {
-  return data.aiTeam.find((member) => member.name === name) ?? data.aiTeam[0];
+  return (data.aiTeam ?? []).find((member) => member.name === name) ?? data.aiTeam?.[0] ?? null;
 }
 
 export function getSceneById(sceneId, data = baseData) {
-  return data.storyboard.scenes.find((scene) => scene.sceneId === sceneId) ?? data.storyboard.scenes[0];
+  return (data.storyboard?.scenes ?? []).find((scene) => scene.sceneId === sceneId) ?? data.storyboard?.scenes?.[0] ?? null;
 }
 
 export function buildSceneOwnerSummary(scene) {
-  if (scene.ownerSummary) return scene.ownerSummary;
-  if (scene.assignments?.length) {
-    return scene.assignments.map((item) => `${item.owner} ${item.assignedShots}镜`).join(" · ");
+  if (scene?.ownerSummary) return scene.ownerSummary;
+  if (scene?.assignments?.length) {
+    return scene.assignments.map((item) => `${item.owner} ${item.assignedShots}镜`).join(" / ");
   }
-  return scene.owners
-    .map((owner) => `${owner.name} ${owner.shots}镜`)
-    .join(" · ");
+
+  return (scene?.owners ?? []).map((owner) => `${owner.name} ${owner.shots}镜`).join(" / ");
 }
 
 export function buildAssetSummary(data = baseData) {
-  return data.assets.map((asset) => ({
+  return (data.assets ?? []).map((asset) => ({
     ...asset,
     progressLabel: `${asset.done}/${asset.total}`,
   }));

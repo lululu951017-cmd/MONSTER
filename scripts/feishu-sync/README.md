@@ -16,6 +16,14 @@ This folder contains a Feishu Bitable sync skeleton that normalizes production d
    - `FEISHU_APP_SECRET`
    - `FEISHU_BITABLE_APP_TOKEN`
 
+You can also put them in the repo root `.env.local` file:
+
+```bash
+FEISHU_APP_ID=your_app_id
+FEISHU_APP_SECRET=your_app_secret
+FEISHU_BITABLE_APP_TOKEN=your_bitable_app_token
+```
+
 ## Commands
 
 Validate the config shape without calling Feishu:

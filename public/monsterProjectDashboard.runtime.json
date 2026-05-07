@@ -1,0 +1,3255 @@
+{
+  "project": {
+    "name": "怪物",
+    "title": "怪物制片台",
+    "subtitle": "",
+    "episodeLabel": "第一集",
+    "episodeCount": 1,
+    "episodeDuration": "",
+    "dateRangeLabel": "",
+    "startDate": "",
+    "endDate": "",
+    "totalStoryboards": 61,
+    "completedStoryboards": 13,
+    "completionRate": 21.3,
+    "assetTotal": 133,
+    "assetCompleted": 0,
+    "scriptProgress": "飞书定场图同步中",
+    "currentStage": "目前进度：第一集分镜制作",
+    "teamSize": 9,
+    "coreTeamSize": 0,
+    "aiTeamSize": 9,
+    "sceneCount": 18,
+    "trackedShots": 61,
+    "priorityDate": "基于飞书实时同步",
+    "reassignSummary": {
+      "name": "合计",
+      "currentShots": 61,
+      "currentRatio": 0,
+      "reassignedShots": 61,
+      "ratio": 0,
+      "group": "",
+      "sceneSummary": "",
+      "confirmed": 13,
+      "revision": 6,
+      "pending": 42,
+      "dailyTarget": 23,
+      "estimatedDays": "",
+      "todayPriority": "",
+      "remark": ""
+    },
+    "dailySummary": {
+      "assignedShots": 61,
+      "confirmed": 13,
+      "revision": 6,
+      "pending": 42,
+      "remaining": 48
+    },
+    "priorityCount": 9
+  },
+  "episodes": [],
+  "coreTeam": [],
+  "aiTeam": [
+    {
+      "name": "智博",
+      "group": "图片制作",
+      "specialty": "图片制作",
+      "assignedShots": 39,
+      "done": 16,
+      "revision": 2,
+      "pending": 21,
+      "progress": 41,
+      "dailyTarget": 6,
+      "estimatedDays": 3.8,
+      "todayPriority": "P0",
+      "priorityNote": "S08 第八场 × 10",
+      "remark": "图片制作",
+      "sceneScope": "第八场 10项 / 第十五场 10项 / 第十四场 6项 / 第十六场 4项",
+      "remainingWorkload": 23,
+      "weeklyGoal": "第八场 10项",
+      "riskNote": "返修项需要优先消化",
+      "todayP0": "优先处理 2 项返修",
+      "todayP1": "推进 6 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第八场",
+          "shots": 10
+        },
+        {
+          "sceneName": "第十五场",
+          "shots": 10
+        },
+        {
+          "sceneName": "第十四场",
+          "shots": 6
+        },
+        {
+          "sceneName": "第十六场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第三场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第六场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第七场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第九场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第十二场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "书豪",
+      "group": "图片制作",
+      "specialty": "图片制作",
+      "assignedShots": 23,
+      "done": 4,
+      "revision": 2,
+      "pending": 17,
+      "progress": 17.4,
+      "dailyTarget": 4,
+      "estimatedDays": 4.8,
+      "todayPriority": "P0",
+      "priorityNote": "S12 第十二场 × 10",
+      "remark": "图片制作",
+      "sceneScope": "第十二场 10项 / 第二场 4项 / 第十三场 4项 / 第一场 3项",
+      "remainingWorkload": 19,
+      "weeklyGoal": "第十二场 10项",
+      "riskNote": "返修项需要优先消化",
+      "todayP0": "优先处理 2 项返修",
+      "todayP1": "推进 4 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第十二场",
+          "shots": 10
+        },
+        {
+          "sceneName": "第二场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第十三场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第一场",
+          "shots": 3
+        },
+        {
+          "sceneName": "第四场",
+          "shots": 1
+        },
+        {
+          "sceneName": "第十四场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "佩佩",
+      "group": "视频制作",
+      "specialty": "视频制作",
+      "assignedShots": 17,
+      "done": 2,
+      "revision": 6,
+      "pending": 9,
+      "progress": 11.8,
+      "dailyTarget": 3,
+      "estimatedDays": 5,
+      "todayPriority": "P0",
+      "priorityNote": "S04 第四场 × 7",
+      "remark": "视频制作",
+      "sceneScope": "第四场 7项 / 第十场 4项 / 第一场 3项 / 第十六场 2项",
+      "remainingWorkload": 15,
+      "weeklyGoal": "第四场 7项",
+      "riskNote": "返修项需要优先消化",
+      "todayP0": "优先处理 6 项返修",
+      "todayP1": "推进 3 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第四场",
+          "shots": 7
+        },
+        {
+          "sceneName": "第十场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第一场",
+          "shots": 3
+        },
+        {
+          "sceneName": "第十六场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第五场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "灵境",
+      "group": "图片制作",
+      "specialty": "图片制作",
+      "assignedShots": 13,
+      "done": 0,
+      "revision": 0,
+      "pending": 13,
+      "progress": 0,
+      "dailyTarget": 2,
+      "estimatedDays": 6.5,
+      "todayPriority": "P1",
+      "priorityNote": "S04 第四场 × 4",
+      "remark": "图片制作",
+      "sceneScope": "第四场 4项 / 第十七场 4项 / 第二场 2项 / 第三场 2项",
+      "remainingWorkload": 13,
+      "weeklyGoal": "第四场 4项",
+      "riskNote": "待制作积压较高",
+      "todayP0": "",
+      "todayP1": "推进 2 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第四场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第十七场",
+          "shots": 4
+        },
+        {
+          "sceneName": "第二场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第三场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第五场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "王浩",
+      "group": "视频制作",
+      "specialty": "视频制作",
+      "assignedShots": 10,
+      "done": 2,
+      "revision": 2,
+      "pending": 6,
+      "progress": 20,
+      "dailyTarget": 2,
+      "estimatedDays": 4,
+      "todayPriority": "P0",
+      "priorityNote": "S02 第二场 × 6",
+      "remark": "视频制作",
+      "sceneScope": "第二场 6项 / 第三场 4项",
+      "remainingWorkload": 8,
+      "weeklyGoal": "第二场 6项",
+      "riskNote": "返修项需要优先消化",
+      "todayP0": "优先处理 2 项返修",
+      "todayP1": "推进 2 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第二场",
+          "shots": 6
+        },
+        {
+          "sceneName": "第三场",
+          "shots": 4
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "俊",
+      "group": "视频制作",
+      "specialty": "视频制作",
+      "assignedShots": 9,
+      "done": 0,
+      "revision": 0,
+      "pending": 9,
+      "progress": 0,
+      "dailyTarget": 2,
+      "estimatedDays": 4.5,
+      "todayPriority": "P1",
+      "priorityNote": "S14 第十四场 × 7",
+      "remark": "视频制作",
+      "sceneScope": "第十四场 7项 / 第十八场 2项",
+      "remainingWorkload": 9,
+      "weeklyGoal": "第十四场 7项",
+      "riskNote": "待制作积压较高",
+      "todayP0": "",
+      "todayP1": "推进 2 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第十四场",
+          "shots": 7
+        },
+        {
+          "sceneName": "第十八场",
+          "shots": 2
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "梦涵",
+      "group": "图片制作",
+      "specialty": "图片制作",
+      "assignedShots": 8,
+      "done": 1,
+      "revision": 0,
+      "pending": 7,
+      "progress": 12.5,
+      "dailyTarget": 2,
+      "estimatedDays": 3.5,
+      "todayPriority": "P1",
+      "priorityNote": "S12 第十二场 × 3",
+      "remark": "图片制作",
+      "sceneScope": "第十二场 3项 / 第四场 2项 / 第十六场 2项 / 第十一场 1项",
+      "remainingWorkload": 7,
+      "weeklyGoal": "第十二场 3项",
+      "riskNote": "当前负载可控",
+      "todayP0": "",
+      "todayP1": "推进 2 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第十二场",
+          "shots": 3
+        },
+        {
+          "sceneName": "第四场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第十六场",
+          "shots": 2
+        },
+        {
+          "sceneName": "第十一场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "黄俊",
+      "group": "图片制作",
+      "specialty": "图片制作",
+      "assignedShots": 2,
+      "done": 0,
+      "revision": 0,
+      "pending": 2,
+      "progress": 0,
+      "dailyTarget": 1,
+      "estimatedDays": 2,
+      "todayPriority": "P1",
+      "priorityNote": "S18 第十八场 × 2",
+      "remark": "图片制作",
+      "sceneScope": "第十八场 2项",
+      "remainingWorkload": 2,
+      "weeklyGoal": "第十八场 2项",
+      "riskNote": "当前负载可控",
+      "todayP0": "",
+      "todayP1": "推进 1 项待制作",
+      "sceneCoverage": [
+        {
+          "sceneName": "第十八场",
+          "shots": 2
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    },
+    {
+      "name": "奇霖",
+      "group": "视频制作",
+      "specialty": "视频制作",
+      "assignedShots": 1,
+      "done": 1,
+      "revision": 0,
+      "pending": 0,
+      "progress": 100,
+      "dailyTarget": 1,
+      "estimatedDays": 0,
+      "todayPriority": "P2",
+      "priorityNote": "S11 第十一场 × 1",
+      "remark": "视频制作",
+      "sceneScope": "第十一场 1项",
+      "remainingWorkload": 0,
+      "weeklyGoal": "第十一场 1项",
+      "riskNote": "当前负载可控",
+      "todayP0": "",
+      "todayP1": "",
+      "sceneCoverage": [
+        {
+          "sceneName": "第十一场",
+          "shots": 1
+        }
+      ],
+      "todayTasks": [],
+      "queue": []
+    }
+  ],
+  "pipeline": [],
+  "risks": [
+    {
+      "id": "R01",
+      "category": "返修风险",
+      "description": "当前有 6 条场次记录处于返修状态",
+      "impact": "高",
+      "probability": "高",
+      "response": "优先清理新增返修，避免返修堆积拖慢后续视频制作",
+      "owner": "图片制作负责人",
+      "status": "关注中"
+    },
+    {
+      "id": "R02",
+      "category": "制作积压",
+      "description": "当前有 42 条场次记录仍待制作",
+      "impact": "高",
+      "probability": "中",
+      "response": "按照场次和负责人切分优先级，优先消化高难条目",
+      "owner": "执行团队",
+      "status": "关注中"
+    },
+    {
+      "id": "R03",
+      "category": "资产不足",
+      "description": "资产仍有 133 项未启动，可能影响后续场景与角色复用",
+      "impact": "中",
+      "probability": "高",
+      "response": "优先补齐高复用角色、主场景与核心道具",
+      "owner": "资产负责人",
+      "status": "监控中"
+    },
+    {
+      "id": "R04",
+      "category": "脚本缺失",
+      "description": "4 条定场图记录缺少对应剧本内容",
+      "impact": "中",
+      "probability": "中",
+      "response": "补齐剧本描述，避免制作阶段理解偏差",
+      "owner": "分镜导演",
+      "status": "待观察"
+    }
+  ],
+  "episodeSchedule": [],
+  "assets": [
+    {
+      "type": "人物资产",
+      "total": 49,
+      "done": 0,
+      "inProgress": 0,
+      "pending": 49,
+      "progress": 0,
+      "owner": "",
+      "priority": "P0",
+      "progressLabel": "0/49"
+    },
+    {
+      "type": "场景资产",
+      "total": 57,
+      "done": 0,
+      "inProgress": 0,
+      "pending": 57,
+      "progress": 0,
+      "owner": "敏 / 奇霖 / 宗骏 / 梦涵 / 智博 / 王浩 / 书豪 / 彦彬 / 老井",
+      "priority": "P1",
+      "progressLabel": "0/57"
+    },
+    {
+      "type": "道具资产",
+      "total": 27,
+      "done": 0,
+      "inProgress": 0,
+      "pending": 27,
+      "progress": 0,
+      "owner": "",
+      "priority": "P1",
+      "progressLabel": "0/27"
+    }
+  ],
+  "assetSummary": {
+    "type": "合计",
+    "total": 133,
+    "done": 0,
+    "inProgress": 0,
+    "pending": 133,
+    "progress": 0,
+    "owner": "",
+    "priority": "",
+    "progressLabel": "0/133"
+  },
+  "priorities": [
+    {
+      "id": "priority-1",
+      "priority": "P0",
+      "owner": "智博",
+      "group": "图片制作",
+      "task": "优先处理 2 项返修",
+      "scope": "第八场 10项 / 第十五场 10项 / 第十四场 6项 / 第十六场 4项",
+      "shots": "23项",
+      "type": "返修",
+      "estimate": "6项/日",
+      "basis": "第八场 10项",
+      "status": "进行中"
+    },
+    {
+      "id": "priority-2",
+      "priority": "P0",
+      "owner": "书豪",
+      "group": "图片制作",
+      "task": "优先处理 2 项返修",
+      "scope": "第十二场 10项 / 第二场 4项 / 第十三场 4项 / 第一场 3项",
+      "shots": "19项",
+      "type": "返修",
+      "estimate": "4项/日",
+      "basis": "第十二场 10项",
+      "status": "进行中"
+    },
+    {
+      "id": "priority-3",
+      "priority": "P0",
+      "owner": "佩佩",
+      "group": "视频制作",
+      "task": "优先处理 6 项返修",
+      "scope": "第四场 7项 / 第十场 4项 / 第一场 3项 / 第十六场 2项",
+      "shots": "15项",
+      "type": "返修",
+      "estimate": "3项/日",
+      "basis": "第四场 7项",
+      "status": "进行中"
+    },
+    {
+      "id": "priority-5",
+      "priority": "P0",
+      "owner": "王浩",
+      "group": "视频制作",
+      "task": "优先处理 2 项返修",
+      "scope": "第二场 6项 / 第三场 4项",
+      "shots": "8项",
+      "type": "返修",
+      "estimate": "2项/日",
+      "basis": "第二场 6项",
+      "status": "进行中"
+    },
+    {
+      "id": "priority-4",
+      "priority": "P1",
+      "owner": "灵境",
+      "group": "图片制作",
+      "task": "推进 2 项待制作",
+      "scope": "第四场 4项 / 第十七场 4项 / 第二场 2项 / 第三场 2项",
+      "shots": "13项",
+      "type": "待制作",
+      "estimate": "2项/日",
+      "basis": "第四场 4项",
+      "status": "排期中"
+    },
+    {
+      "id": "priority-6",
+      "priority": "P1",
+      "owner": "俊",
+      "group": "视频制作",
+      "task": "推进 2 项待制作",
+      "scope": "第十四场 7项 / 第十八场 2项",
+      "shots": "9项",
+      "type": "待制作",
+      "estimate": "2项/日",
+      "basis": "第十四场 7项",
+      "status": "排期中"
+    },
+    {
+      "id": "priority-7",
+      "priority": "P1",
+      "owner": "梦涵",
+      "group": "图片制作",
+      "task": "推进 2 项待制作",
+      "scope": "第十二场 3项 / 第四场 2项 / 第十六场 2项 / 第十一场 1项",
+      "shots": "7项",
+      "type": "待制作",
+      "estimate": "2项/日",
+      "basis": "第十二场 3项",
+      "status": "排期中"
+    },
+    {
+      "id": "priority-8",
+      "priority": "P1",
+      "owner": "黄俊",
+      "group": "图片制作",
+      "task": "推进 1 项待制作",
+      "scope": "第十八场 2项",
+      "shots": "2项",
+      "type": "待制作",
+      "estimate": "1项/日",
+      "basis": "第十八场 2项",
+      "status": "排期中"
+    },
+    {
+      "id": "priority-9",
+      "priority": "P2",
+      "owner": "奇霖",
+      "group": "视频制作",
+      "task": "维持当前节奏",
+      "scope": "第十一场 1项",
+      "shots": "0项",
+      "type": "已完成",
+      "estimate": "1项/日",
+      "basis": "第十一场 1项",
+      "status": "完成"
+    }
+  ],
+  "storyboard": {
+    "trackedShots": 61,
+    "sceneCount": 18,
+    "scenes": [
+      {
+        "sceneId": "scene-01",
+        "sceneName": "第一场",
+        "sceneCode": "S01",
+        "sceneNumber": 1,
+        "sceneDescription": "全景，正对告示，微仰拍摄高耸的城墙贴着告示，告示前围着一群农民打扮的百姓。",
+        "sceneType": "高难",
+        "originalOwner": "书豪",
+        "totalShots": 3,
+        "assignments": [
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 3,
+            "confirmed": 1,
+            "revision": 2,
+            "pending": 0
+          },
+          {
+            "owner": "佩佩",
+            "group": "视频制作",
+            "assignedShots": 3,
+            "confirmed": 1,
+            "revision": 2,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 2,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "书豪 3项 / 佩佩 3项",
+        "imageOwners": [
+          "书豪",
+          "书豪",
+          "书豪"
+        ],
+        "videoOwners": [
+          "佩佩",
+          "佩佩",
+          "佩佩"
+        ],
+        "imageDoneAt": "1777219200000",
+        "videoDoneAt": "1777996800000"
+      },
+      {
+        "sceneId": "scene-02",
+        "sceneName": "第二场",
+        "sceneCode": "S02",
+        "sceneNumber": 2,
+        "sceneDescription": "微俯高机位，画左下角挂街对面屋檐，画面重心落在济世堂门头，和沿街排队的百姓。",
+        "sceneType": "高难",
+        "originalOwner": "书豪",
+        "totalShots": 6,
+        "assignments": [
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 4,
+            "confirmed": 2,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "灵境",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "王浩",
+            "group": "视频制作",
+            "assignedShots": 6,
+            "confirmed": 2,
+            "revision": 0,
+            "pending": 4
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 2,
+        "revisionShots": 0,
+        "pendingShots": 4,
+        "deletedShots": 0,
+        "ownerSummary": "书豪 4项 / 灵境 2项 / 王浩 6项",
+        "imageOwners": [
+          "书豪",
+          "书豪",
+          "灵境",
+          "灵境",
+          "书豪",
+          "书豪"
+        ],
+        "videoOwners": [
+          "王浩",
+          "王浩",
+          "王浩",
+          "王浩",
+          "王浩",
+          "王浩"
+        ],
+        "imageDoneAt": "1777392000000",
+        "videoDoneAt": "1778083200000"
+      },
+      {
+        "sceneId": "scene-03",
+        "sceneName": "第三场",
+        "sceneCode": "S03",
+        "sceneNumber": 3,
+        "sceneDescription": "别：远景（高机位前推）\n机位：架设在厢房屋檐上方或对面高处，镜头前推\n角度：俯拍，挂屋檐关系\n画面内容：画面从上往下俯拍后院全景。前景是厢房屋檐的瓦片和椽子，形成画框。后景是厢房紧闭的门窗。刘大夫和两名小厮站在厢房门外，探头探脑，身体贴向窗纸。光线从上方照射，厢房处于阴影中，刘大夫等人的身影在窗纸上投下暗影。",
+        "sceneType": "高难",
+        "originalOwner": "智博",
+        "totalShots": 4,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 2,
+            "pending": 0
+          },
+          {
+            "owner": "灵境",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "王浩",
+            "group": "视频制作",
+            "assignedShots": 4,
+            "confirmed": 0,
+            "revision": 2,
+            "pending": 2
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 2,
+        "pendingShots": 2,
+        "deletedShots": 0,
+        "ownerSummary": "智博 2项 / 灵境 2项 / 王浩 4项",
+        "imageOwners": [
+          "智博",
+          "智博",
+          "灵境",
+          "灵境"
+        ],
+        "videoOwners": [
+          "王浩",
+          "王浩",
+          "王浩",
+          "王浩"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "sceneId": "scene-04",
+        "sceneName": "第四场",
+        "sceneCode": "S04",
+        "sceneNumber": 4,
+        "sceneDescription": "景别： 全景\n机位： 低位，固定于田埂\n角度： 平视（略带仰视）\n画面内容：夕阳将车影拉长。王芸侧坐于左侧车辕，双脚悬空。后景程善枯坐于干草堆旁，空荡的左袖在风中向后扬起。",
+        "sceneType": "中等",
+        "originalOwner": "书豪",
+        "totalShots": 7,
+        "assignments": [
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "灵境",
+            "group": "图片制作",
+            "assignedShots": 4,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 4
+          },
+          {
+            "owner": "梦涵",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "佩佩",
+            "group": "视频制作",
+            "assignedShots": 7,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 6
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 0,
+        "pendingShots": 6,
+        "deletedShots": 0,
+        "ownerSummary": "书豪 1项 / 灵境 4项 / 梦涵 2项 / 佩佩 7项",
+        "imageOwners": [
+          "书豪",
+          "灵境",
+          "灵境",
+          "梦涵",
+          "灵境",
+          "梦涵",
+          "灵境"
+        ],
+        "videoOwners": [
+          "佩佩",
+          "佩佩",
+          "佩佩",
+          "佩佩",
+          "佩佩",
+          "佩佩",
+          "佩佩"
+        ],
+        "imageDoneAt": "1778256000000",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "sceneId": "scene-05",
+        "sceneName": "第五场",
+        "sceneCode": "S05",
+        "sceneNumber": 5,
+        "sceneDescription": "全景，侧拍，微仰，拍摄程善站在灶台前，粥正在煮冒着热气。",
+        "sceneType": "简单",
+        "originalOwner": "灵境",
+        "totalShots": 1,
+        "assignments": [
+          {
+            "owner": "灵境",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 1
+          },
+          {
+            "owner": "佩佩",
+            "group": "视频制作",
+            "assignedShots": 1,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 1
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 1,
+        "deletedShots": 0,
+        "ownerSummary": "灵境 1项 / 佩佩 1项",
+        "imageOwners": [
+          "灵境"
+        ],
+        "videoOwners": [
+          "佩佩"
+        ],
+        "imageDoneAt": "1778256000000",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "sceneId": "scene-06",
+        "sceneName": "第六场",
+        "sceneCode": "S06",
+        "sceneNumber": 6,
+        "sceneDescription": "景别： 全景\n机位： 房梁上方\n角度： 俯拍\n画面内容： 程善跪伏于画幅下半部，婉氏佝偻靠坐于床头。",
+        "sceneType": "中等",
+        "originalOwner": "智博",
+        "totalShots": 1,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 0,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "智博 1项 / 智博 1项",
+        "imageOwners": [
+          "智博"
+        ],
+        "videoOwners": [
+          "智博"
+        ],
+        "imageDoneAt": "1778256000000",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "sceneId": "scene-07",
+        "sceneName": "第七场",
+        "sceneCode": "S07",
+        "sceneNumber": 7,
+        "sceneDescription": "景别： 全景\n角度： 低机位平拍\n画面内容： 程善打开厨房角落地面上的木板，看向里面。",
+        "sceneType": "中等",
+        "originalOwner": "智博",
+        "totalShots": 1,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 0,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "智博 1项 / 智博 1项",
+        "imageOwners": [
+          "智博"
+        ],
+        "videoOwners": [
+          "智博"
+        ],
+        "imageDoneAt": "1777219200000",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "sceneId": "scene-08",
+        "sceneName": "第八场",
+        "sceneCode": "S08",
+        "sceneNumber": 8,
+        "sceneDescription": "景别： 全景\n角度： 仰视\n画面内容： 程善举着油灯站在石阶上方入口处。后景墙面投射出被拉长的黑影。",
+        "sceneType": "中等",
+        "originalOwner": "智博",
+        "totalShots": 5,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 5,
+            "confirmed": 5,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 5,
+            "confirmed": 5,
+            "revision": 0,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 5,
+        "revisionShots": 0,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "智博 5项 / 智博 5项",
+        "imageOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博"
+        ],
+        "videoOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博"
+        ],
+        "imageDoneAt": "1777478400000",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "sceneId": "scene-09",
+        "sceneName": "第九场",
+        "sceneCode": "S09",
+        "sceneNumber": 9,
+        "sceneDescription": "景别： 中景\n角度： 平视（侧面）\n画面内容： 程千秋虚脱低垂着头，两侧湿冷黑发如水草般散乱垂落，遮挡大半张脸。",
+        "sceneType": "简单",
+        "originalOwner": "智博",
+        "totalShots": 1,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 0,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "智博 1项 / 智博 1项",
+        "imageOwners": [
+          "智博"
+        ],
+        "videoOwners": [
+          "智博"
+        ],
+        "imageDoneAt": "1777478400000",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "sceneId": "scene-10",
+        "sceneName": "第十场",
+        "sceneCode": "S10",
+        "sceneNumber": 10,
+        "sceneDescription": "景别： 全景\n机位： 灯笼上方（挂置）\n角度： 微俯\n画面内容： 前景为灯笼。院中三张方桌错落摆放，肉菜升腾白雾弥漫院落。村民围桌而坐。（明确程善位置即可）",
+        "sceneType": "高难",
+        "originalOwner": "佩佩",
+        "totalShots": 2,
+        "assignments": [
+          {
+            "owner": "佩佩",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 2,
+            "pending": 0
+          },
+          {
+            "owner": "佩佩",
+            "group": "视频制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 2,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 2,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "佩佩 2项 / 佩佩 2项",
+        "imageOwners": [
+          "佩佩",
+          "佩佩"
+        ],
+        "videoOwners": [
+          "佩佩",
+          "佩佩"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "sceneId": "scene-11",
+        "sceneName": "第十一场",
+        "sceneCode": "S11",
+        "sceneNumber": 11,
+        "sceneDescription": "景别： 特写\n角度： 垂直俯拍\n画面内容： 左侧粗瓷碗边缘，暗红色蛊虫在瓷沿蠕动。右侧泛黄手抄簿册，纸面正中绘有形态完全一致的虫图，程善的右手摆在册子边。",
+        "sceneType": "简单",
+        "originalOwner": "梦涵",
+        "totalShots": 1,
+        "assignments": [
+          {
+            "owner": "梦涵",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          },
+          {
+            "owner": "奇霖",
+            "group": "视频制作",
+            "assignedShots": 1,
+            "confirmed": 1,
+            "revision": 0,
+            "pending": 0
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 1,
+        "revisionShots": 0,
+        "pendingShots": 0,
+        "deletedShots": 0,
+        "ownerSummary": "梦涵 1项 / 奇霖 1项",
+        "imageOwners": [
+          "梦涵"
+        ],
+        "videoOwners": [
+          "奇霖"
+        ],
+        "imageDoneAt": "1777219200000",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "sceneId": "scene-12",
+        "sceneName": "第十二场",
+        "sceneCode": "S12",
+        "sceneNumber": 12,
+        "sceneDescription": "景别：全景双人镜头\n机位：架设在程善家院外拍院内\n角度：平视\n画面内容：程善站在门内，王芸站在门外",
+        "sceneType": "中等",
+        "originalOwner": "梦涵",
+        "totalShots": 7,
+        "assignments": [
+          {
+            "owner": "梦涵",
+            "group": "图片制作",
+            "assignedShots": 3,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 3
+          },
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 3,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 3
+          },
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 1
+          },
+          {
+            "owner": "书豪",
+            "group": "视频制作",
+            "assignedShots": 7,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 7
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 7,
+        "deletedShots": 0,
+        "ownerSummary": "梦涵 3项 / 书豪 3项 / 智博 1项 / 书豪 7项",
+        "imageOwners": [
+          "梦涵",
+          "梦涵",
+          "梦涵",
+          "书豪",
+          "书豪",
+          "书豪",
+          "智博"
+        ],
+        "videoOwners": [
+          "书豪",
+          "书豪",
+          "书豪",
+          "书豪",
+          "书豪",
+          "书豪",
+          "书豪"
+        ],
+        "imageDoneAt": "1777478400000",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "sceneId": "scene-13",
+        "sceneName": "第十三场",
+        "sceneCode": "S13",
+        "sceneNumber": 13,
+        "sceneDescription": "景别：全景\n机位：架设在旧屋门前，正对程恩和幼年程善\n角度：低角度平视，侧拍\n画面内容：前景是芦苇荡（虚化或剪影），后景是旧屋门前。程恩背着深色行囊，侧身而立，一只手按在幼年程善头顶。暮色沉沉，光线昏暗。两人一站一立，形成高低对比。空间关系清晰：门前空地、芦苇荡、暮色天光。",
+        "sceneType": "中等",
+        "originalOwner": "书豪",
+        "totalShots": 2,
+        "assignments": [
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "书豪",
+            "group": "视频制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 2,
+        "deletedShots": 0,
+        "ownerSummary": "书豪 2项 / 书豪 2项",
+        "imageOwners": [
+          "书豪",
+          "书豪"
+        ],
+        "videoOwners": [
+          "书豪",
+          "书豪"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "sceneId": "scene-14",
+        "sceneName": "第十四场",
+        "sceneCode": "S14",
+        "sceneNumber": 14,
+        "sceneDescription": "景别：大全景（暗）\n机位：架设在虚空/意识空间中\n角度：平视（全暗画面）\n画面内容：程善坠入的黑暗中，仅有一线极细的暗红光纹在虚空中浮现。光纹随画外音频率震荡，忽明忽暗。周围是无尽的黑暗，光纹是唯一的光源。",
+        "sceneType": "中等",
+        "originalOwner": "智博",
+        "totalShots": 7,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 6,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 6
+          },
+          {
+            "owner": "书豪",
+            "group": "图片制作",
+            "assignedShots": 1,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 1
+          },
+          {
+            "owner": "俊",
+            "group": "视频制作",
+            "assignedShots": 7,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 7
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 7,
+        "deletedShots": 0,
+        "ownerSummary": "智博 6项 / 书豪 1项 / 俊 7项",
+        "imageOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "书豪"
+        ],
+        "videoOwners": [
+          "俊",
+          "俊",
+          "俊",
+          "俊",
+          "俊",
+          "俊",
+          "俊"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "sceneId": "scene-15",
+        "sceneName": "第十五场",
+        "sceneCode": "S15",
+        "sceneNumber": 15,
+        "sceneDescription": "景别： 中景（程善主观）\n角度： 侧向\n画面内容： 婉氏动作僵硬地停止吮吸，侧背对镜头。芸娘在婉氏怀中，面部腐烂。",
+        "sceneType": "中等",
+        "originalOwner": "智博",
+        "totalShots": 5,
+        "assignments": [
+          {
+            "owner": "智博",
+            "group": "图片制作",
+            "assignedShots": 5,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 5
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 5,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 5
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 5,
+        "deletedShots": 0,
+        "ownerSummary": "智博 5项 / 智博 5项",
+        "imageOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博"
+        ],
+        "videoOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博",
+          "智博"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "sceneId": "scene-16",
+        "sceneName": "第十六场",
+        "sceneCode": "S16",
+        "sceneNumber": 16,
+        "sceneDescription": "景别： 全景\n角度： 斜侧微俯\n画面内容：村头影壁前，县衙差役正在宣读。六七名村民呈围在旁边听。",
+        "sceneType": "高难",
+        "originalOwner": "佩佩",
+        "totalShots": 4,
+        "assignments": [
+          {
+            "owner": "佩佩",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "梦涵",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "智博",
+            "group": "视频制作",
+            "assignedShots": 4,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 4
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 4,
+        "deletedShots": 0,
+        "ownerSummary": "佩佩 2项 / 梦涵 2项 / 智博 4项",
+        "imageOwners": [
+          "佩佩",
+          "佩佩",
+          "梦涵",
+          "梦涵"
+        ],
+        "videoOwners": [
+          "智博",
+          "智博",
+          "智博",
+          "智博"
+        ],
+        "imageDoneAt": "1778256000000",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "sceneId": "scene-17",
+        "sceneName": "第十七场",
+        "sceneCode": "S17",
+        "sceneNumber": 17,
+        "sceneDescription": "景别： 全景\n角度： 正背，从程善后方仰拍程千秋，带到程善全部背影。\n画面内容： 二人半身，人物后方留出二分之一画面留白。程千秋死死盯着程善，程善神情平静。",
+        "sceneType": "中等",
+        "originalOwner": "灵境",
+        "totalShots": 2,
+        "assignments": [
+          {
+            "owner": "灵境",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "灵境",
+            "group": "视频制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 2,
+        "deletedShots": 0,
+        "ownerSummary": "灵境 2项 / 灵境 2项",
+        "imageOwners": [
+          "灵境",
+          "灵境"
+        ],
+        "videoOwners": [
+          "灵境",
+          "灵境"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "sceneId": "scene-18",
+        "sceneName": "第十八场",
+        "sceneCode": "S18",
+        "sceneNumber": 18,
+        "sceneDescription": "景别： 全景\n角度： 微俯\n画面内容： 四人呈对峙站位。孙德贵居中靠前，两名大汉分列其身后两侧，程善站在门边。",
+        "sceneType": "高难",
+        "originalOwner": "黄俊",
+        "totalShots": 2,
+        "assignments": [
+          {
+            "owner": "黄俊",
+            "group": "图片制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          },
+          {
+            "owner": "俊",
+            "group": "视频制作",
+            "assignedShots": 2,
+            "confirmed": 0,
+            "revision": 0,
+            "pending": 2
+          }
+        ],
+        "shots": [],
+        "confirmedShots": 0,
+        "revisionShots": 0,
+        "pendingShots": 2,
+        "deletedShots": 0,
+        "ownerSummary": "黄俊 2项 / 俊 2项",
+        "imageOwners": [
+          "黄俊",
+          "黄俊"
+        ],
+        "videoOwners": [
+          "俊",
+          "俊"
+        ],
+        "imageDoneAt": "1778169600000",
+        "videoDoneAt": "1778774400000"
+      }
+    ],
+    "sceneRows": [
+      {
+        "rowId": "rec27baglUNwKo",
+        "sceneName": "第一场",
+        "sceneNumber": 1,
+        "sceneCode": "S01",
+        "scriptContent": "全景，正对告示，微仰拍摄高耸的城墙贴着告示，告示前围着一群农民打扮的百姓。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1777219200000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1777996800000"
+      },
+      {
+        "rowId": "rec27baglUNAbX",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "微俯高机位，画左下角挂街对面屋檐，画面重心落在济世堂门头，和沿街排队的百姓。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778083200000"
+      },
+      {
+        "rowId": "rec27baglUNC1I",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "全景，斜侧高机位，机架在就诊室入口右侧，刘大夫与老者对坐，刘大夫为老者诊脉。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "书豪",
+        "level": "中等",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778083200000"
+      },
+      {
+        "rowId": "rec27baglUNDLE",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "全景，微俯拍摄柜台及正堂内。小厮端坐柜台后，程善站在柜台前，两人隔台对峙。程善斗笠压低，左袖空荡。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778083200000"
+      },
+      {
+        "rowId": "rec27baglUNFuA",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "侧拍双人全景（逆光），刘益德捻须，盘问程善，程善坐在案前刘益德对面。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "rowId": "recvialZ3G8Zzg",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "从屋内拍门口全景，程善正在走出，明彩正在走入，两人擦肩而过，逆光。",
+        "sceneStatus": "制作中",
+        "imageOwner": "书豪",
+        "level": "中等",
+        "imageDoneAt": "1777996800000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "rowId": "recvialZ3G8JoK",
+        "sceneName": "第二场",
+        "sceneNumber": 2,
+        "sceneCode": "S02",
+        "scriptContent": "景别：全景\n机位：从刘大夫身后高处拍摄四人全景，前景是刘大夫侧背，中景是程善和倒地的明彩，后景门外及围观百姓。\n角度：微俯\n光线从门口涌入，程善和明彩处于相对明亮的位置，刘大夫处于前景暗部。空间关系清晰：刘大夫阻拦在前，程善蹲地救治在后，两人形成对峙姿态。围观群众在画外或画面边缘。",
+        "sceneStatus": "制作中",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1777996800000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "rowId": "recvialZ3GL651",
+        "sceneName": "第三场",
+        "sceneNumber": 3,
+        "sceneCode": "S03",
+        "scriptContent": "别：远景（高机位前推）\n机位：架设在厢房屋檐上方或对面高处，镜头前推\n角度：俯拍，挂屋檐关系\n画面内容：画面从上往下俯拍后院全景。前景是厢房屋檐的瓦片和椽子，形成画框。后景是厢房紧闭的门窗。刘大夫和两名小厮站在厢房门外，探头探脑，身体贴向窗纸。光线从上方照射，厢房处于阴影中，刘大夫等人的身影在窗纸上投下暗影。",
+        "sceneStatus": "新增返修",
+        "imageOwner": "智博",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3GqsZz",
+        "sceneName": "第三场",
+        "sceneNumber": 3,
+        "sceneCode": "S03",
+        "scriptContent": "景别：肩后带关系镜头\n画面内容：从刘大夫肩后拍摄，前景是他的肩膀和后脑，后景是两个小厮。刘大夫回头，压低声音对小厮训话（“人是他医的，真要有什么三长两短，便拿他抵罪”或类似内容）。小厮点头。",
+        "sceneStatus": "新增返修",
+        "imageOwner": "智博",
+        "level": "",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3GK9zO",
+        "sceneName": "第三场",
+        "sceneNumber": 3,
+        "sceneCode": "S03",
+        "scriptContent": "景别：全景\n机位：架设在厢房内侧，正对床榻\n角度：平视\n画面内容：画面左侧是明彩躺在榻上，双目紧闭。画面右侧是程善端坐床边，右手搭在明彩腕上。窗纸在画面后景（或画外），光线从窗户透入，在两人身上形成柔和的侧光。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3G82NE",
+        "sceneName": "第三场",
+        "sceneNumber": 3,
+        "sceneCode": "S03",
+        "scriptContent": "景别：中全景（从床尾方向拍摄）\n机位：架设在床头\n角度：高机位俯拍\n画面内容：画面纵深方向——前景是床榻的床尾栏杆（虚化），中景是明彩躺在榻上，双目紧闭，双手垂在身侧。后景是刘益德站在榻边，身体前倾，一手搭在明彩腕上（或正要搭脉）。光线从窗户（画外）透入，在明彩面部形成柔和的侧光，刘益德处于相对较暗的位置。后景处程善站在刘益德身后。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "王浩",
+        "videoDoneAt": "1778601600000"
+      },
+      {
+        "rowId": "recvialZ3GDPcP",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "景别： 全景\n机位： 低位，固定于田埂\n角度： 平视（略带仰视）\n画面内容：夕阳将车影拉长。王芸侧坐于左侧车辕，双脚悬空。后景程善枯坐于干草堆旁，空荡的左袖在风中向后扬起。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "书豪",
+        "level": "",
+        "imageDoneAt": "",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3GfzD3",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "景别： 远景\n机位： 低位，置于枯草丛深处\n角度： 平视\n画面内容： 前景为几株枯树斜向入画。中心远景处，一辆牛车在血红色残阳下缓慢行驶。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3G3oS9",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "野狗出现在田埂中的氛围图",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "简单",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3G1ooO",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "景别： 全景\n角度： 平视侧拍\n画面内容： 左侧为牛车与老牛，王芸站于车辕边侧身挥手。右侧为程善，单手下垂，左袖被风吹起。",
+        "sceneStatus": "制作中",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3GEzTW",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "（母亲床上）侧面平拍程善和程恩全景，程善坐在床边，程恩坐在床边椅子上，两人面对。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3GK4DQ",
+        "sceneName": "第五场",
+        "sceneNumber": 5,
+        "sceneCode": "S05",
+        "scriptContent": "全景，侧拍，微仰，拍摄程善站在灶台前，粥正在煮冒着热气。",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "简单",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3GxOQC",
+        "sceneName": "第六场",
+        "sceneNumber": 6,
+        "sceneCode": "S06",
+        "scriptContent": "景别： 全景\n机位： 房梁上方\n角度： 俯拍\n画面内容： 程善跪伏于画幅下半部，婉氏佝偻靠坐于床头。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "rowId": "recvialZ3GJUdJ",
+        "sceneName": "第七场",
+        "sceneNumber": 7,
+        "sceneCode": "S07",
+        "scriptContent": "景别： 全景\n角度： 低机位平拍\n画面内容： 程善打开厨房角落地面上的木板，看向里面。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777219200000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778256000000"
+      },
+      {
+        "rowId": "recvialZ3GvSBf",
+        "sceneName": "第八场",
+        "sceneNumber": 8,
+        "sceneCode": "S08",
+        "scriptContent": "景别： 全景\n角度： 仰视\n画面内容： 程善举着油灯站在石阶上方入口处。后景墙面投射出被拉长的黑影。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3G16ux",
+        "sceneName": "第八场",
+        "sceneNumber": 8,
+        "sceneCode": "S08",
+        "scriptContent": "从地窖内部微仰拍摄程善全景，程善站在桌旁，举着油灯，后景是地窖连接暗道的入口。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3GRLbH",
+        "sceneName": "第八场",
+        "sceneNumber": 8,
+        "sceneCode": "S08",
+        "scriptContent": "景别： 全景\n机位： 模拟程善主观视角\n角度： 平视\n画面内容： 黑伞及附近符纸全景。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3Gsalf",
+        "sceneName": "第八场",
+        "sceneNumber": 8,
+        "sceneCode": "S08",
+        "scriptContent": "景别： 全景\n角度： 平视（侧面）\n画面内容： 大深焦画面。左侧为程恩，右侧为十二岁的程善，后景中间为石墙上的黑伞。程恩递出血符，程善伸出右手接过。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777392000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3GFxer",
+        "sceneName": "第八场",
+        "sceneNumber": 8,
+        "sceneCode": "S08",
+        "scriptContent": "景别： 全景\n角度： 垂直俯视\n画面内容： 程千秋四肢被漆黑铁链呈放射状贯穿，身体被钉在血池水面。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3GgEE5",
+        "sceneName": "第九场",
+        "sceneNumber": 9,
+        "sceneCode": "S09",
+        "scriptContent": "景别： 中景\n角度： 平视（侧面）\n画面内容： 程千秋虚脱低垂着头，两侧湿冷黑发如水草般散乱垂落，遮挡大半张脸。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "智博",
+        "level": "简单",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778515200000"
+      },
+      {
+        "rowId": "recvialZ3Gx77v",
+        "sceneName": "第十场",
+        "sceneNumber": 10,
+        "sceneCode": "S10",
+        "scriptContent": "景别： 全景\n机位： 灯笼上方（挂置）\n角度： 微俯\n画面内容： 前景为灯笼。院中三张方桌错落摆放，肉菜升腾白雾弥漫院落。村民围桌而坐。（明确程善位置即可）",
+        "sceneStatus": "新增返修",
+        "imageOwner": "佩佩",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3GjN7p",
+        "sceneName": "第十场",
+        "sceneNumber": 10,
+        "sceneCode": "S10",
+        "scriptContent": "王家开宴菜品特写氛围图",
+        "sceneStatus": "新增返修",
+        "imageOwner": "佩佩",
+        "level": "简单",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3G3tME",
+        "sceneName": "第十一场",
+        "sceneNumber": 11,
+        "sceneCode": "S11",
+        "scriptContent": "景别： 特写\n角度： 垂直俯拍\n画面内容： 左侧粗瓷碗边缘，暗红色蛊虫在瓷沿蠕动。右侧泛黄手抄簿册，纸面正中绘有形态完全一致的虫图，程善的右手摆在册子边。",
+        "sceneStatus": "制作完成",
+        "imageOwner": "梦涵",
+        "level": "简单",
+        "imageDoneAt": "1777219200000",
+        "videoOwner": "奇霖",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recvialZ3GgUpP",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：全景双人镜头\n机位：架设在程善家院外拍院内\n角度：平视\n画面内容：程善站在门内，王芸站在门外",
+        "sceneStatus": "制作中",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3Gi8Rd",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：全景\n机位：带程善王芸肩部前景拍摄后景中的王家大哥出现\n角度：俯拍（约-20°至-30°），\n画面内容：程善和芸姐站在院门外，村道尽头，一个踉跄的身影由远及近，拖着沉重的脚步从浓雾中剥离出来。",
+        "sceneStatus": "制作中",
+        "imageOwner": "梦涵",
+        "level": "高难",
+        "imageDoneAt": "1777996800000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3GzvAZ",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：中景（室内，从床榻方向拍摄）\n机位：架设在床榻一侧，正对房门方向\n角度：平视\n画面内容：画面纵深方向——前景是婉氏半躺在床榻上（模糊或侧影），中景是堂屋空间，后景是房门。芸姐背部紧贴门板，站在门后。光线从门外（或窗户）透入，室内昏暗。",
+        "sceneStatus": "",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3GBDud",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：全景\n机位：架设在院门外侧，正对院门和程善\n角度：平视\n画面内容：画面中央是院门，程善独自挡在门前，横持镢头。院门两侧是院墙。背景是夜色和雾气。院门外（画面前景或两侧）是围拢的变异村民，黑影晃动。",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3GJTaa",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：中景（侧面）\n机位：架设在程善与王家大哥缠斗位置的侧方\n角度：低机位平视\n画面内容：画面中央是程善和王家大哥扭打在一起——王家大哥跨坐在程善身上，程善躺倒在地。两人一上一下，形成对抗关系。背景是院内地面的泥土和水渍，周围昏暗。",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3G5d8a",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "别：中景（俯拍）\n机位：架设在院子上方（如屋檐或高处），俯拍程善倒地位置\n角度：俯拍（约-30°）\n画面内容：程善躺在血泊中，位于画面中央，身上趴着三个变异居民，正有更多的在围拢，周围是院内的泥地和积水。光线昏暗，程善的身影在血泊中形成暗色轮廓",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3Gh3Vm",
+        "sceneName": "第十二场",
+        "sceneNumber": 12,
+        "sceneCode": "S12",
+        "scriptContent": "景别：全景（地窖内）\n机位：架设在地窖内部，平视正对黑伞\n角度：平视\n画面内容：画面中央是黑伞。伞面符纸已全部消失。周围数名变异村民伏在黑伞周围，低头舔舐手中符纸。地窖内昏暗，黑伞散发暗红光芒。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778688000000"
+      },
+      {
+        "rowId": "recvialZ3GP12c",
+        "sceneName": "第十三场",
+        "sceneNumber": 13,
+        "sceneCode": "S13",
+        "scriptContent": "景别：全景\n机位：架设在旧屋门前，正对程恩和幼年程善\n角度：低角度平视，侧拍\n画面内容：前景是芦苇荡（虚化或剪影），后景是旧屋门前。程恩背着深色行囊，侧身而立，一只手按在幼年程善头顶。暮色沉沉，光线昏暗。两人一站一立，形成高低对比。空间关系清晰：门前空地、芦苇荡、暮色天光。",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3G2dFc",
+        "sceneName": "第十三场",
+        "sceneNumber": 13,
+        "sceneCode": "S13",
+        "scriptContent": "景别：远景\n机位：架设在程善身后，仰拍全景\n角度：微仰\n画面内容：画面是芦苇荡全景。芦苇丛在暮色中摇曳，前景是程善的身影在芦苇中奔跑，。远处父亲的身影已逐渐消失。",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "书豪",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GDAIF",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别：大全景（暗）\n机位：架设在虚空/意识空间中\n角度：平视（全暗画面）\n画面内容：程善坠入的黑暗中，仅有一线极细的暗红光纹在虚空中浮现。光纹随画外音频率震荡，忽明忽暗。周围是无尽的黑暗，光纹是唯一的光源。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3Gf1k4",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别：仰拍中景（半空中的黑伞）\n画面内容：前景挂黑伞悬在半空，伞骨在极度压抑的震颤中发出金属崩裂声。伞面张开，一股浓稠至黑红的煞气呈环形横扫。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "简单",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3G0UEk",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别：侧面全景\n画面内容：血雾精准灌入程善眉心，一圈暗红气浪从撞击点荡开。程善脊椎发出脆响，身体猛地向后反弓，脚尖绷直离地半尺。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GtG32",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别：全景\n机位：架设在院中高处或远处，俯拍全景\n角度：俯拍（约-15°）\n画面内容：赤目程善立于院中，周身雾气受内劲激荡散开。周围是散落的柴堆、地面狼藉。变异村民从四面围拢。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GzT11",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别： 中全景\n角度： 平视\n画面内容： 昏暗旧屋内，一张木桌被顶光照亮。幼年程善端坐桌前背诵口诀。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "简单",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GnBkR",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别： 全景\n角度： 平视\n画面内容： 幼年程善站定于院落中心。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "简单",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GPh8e",
+        "sceneName": "第十四场",
+        "sceneNumber": 14,
+        "sceneCode": "S14",
+        "scriptContent": "景别： 中景\n角度： 平视\n画面内容： 赤目程善立于院中。眉心血色纹路由深转浅，直至消退。变异村民倒落一地。",
+        "sceneStatus": "",
+        "imageOwner": "书豪",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GVzRE",
+        "sceneName": "第十五场",
+        "sceneNumber": 15,
+        "sceneCode": "S15",
+        "scriptContent": "景别： 中景（程善主观）\n角度： 侧向\n画面内容： 婉氏动作僵硬地停止吮吸，侧背对镜头。芸娘在婉氏怀中，面部腐烂。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GPIFS",
+        "sceneName": "第十五场",
+        "sceneNumber": 15,
+        "sceneCode": "S15",
+        "scriptContent": "景别： 中景\n角度： 正侧面\n画面内容： 婉氏扑入程善怀中，双手死死按住他，头埋入颈窝啃噬。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GDroM",
+        "sceneName": "第十五场",
+        "sceneNumber": 15,
+        "sceneCode": "S15",
+        "scriptContent": "景别： 中全景\n角度： 高机位俯拍\n画面内容： 程善与婉氏相对跪在昏暗堂屋中央。后景为王芸腐烂的尸体横陈，四周狼藉。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GYaEU",
+        "sceneName": "第十五场",
+        "sceneNumber": 15,
+        "sceneCode": "S15",
+        "scriptContent": "景别： 全景\n角度： 平视（正面）\n画面内容： 程善跪坐在堂屋内，头顶窗户洒下一道晨光。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GNurp",
+        "sceneName": "第十五场",
+        "sceneNumber": 15,
+        "sceneCode": "S15",
+        "scriptContent": "景别： 低机位侧面\n角度： 仰视全景\n画面内容： 程善低垂着头，泪水满脸，整个人蜷缩在地。稀薄的血雾在他头顶上方弥散。",
+        "sceneStatus": "",
+        "imageOwner": "智博",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3G4Yjt",
+        "sceneName": "第十六场",
+        "sceneNumber": 16,
+        "sceneCode": "S16",
+        "scriptContent": "景别： 全景\n角度： 斜侧微俯\n画面内容：村头影壁前，县衙差役正在宣读。六七名村民呈围在旁边听。",
+        "sceneStatus": "",
+        "imageOwner": "佩佩",
+        "level": "高难",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3Gg0J9",
+        "sceneName": "第十六场",
+        "sceneNumber": 16,
+        "sceneCode": "S16",
+        "scriptContent": "景别： 全景\n角度： 平视\n画面内容： 王家院子。柴草散落，农具歪斜，桌椅狼藉。",
+        "sceneStatus": "",
+        "imageOwner": "佩佩",
+        "level": "高难",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GD2hU",
+        "sceneName": "第十六场",
+        "sceneNumber": 16,
+        "sceneCode": "S16",
+        "scriptContent": "景别： 全景\n角度： 高机位俯拍\n画面内容： 前景为破陋的瓦片和漏光的房梁，形成残缺框架。程善立于灶台前，手僵在半空。",
+        "sceneStatus": "",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3Gjw6t",
+        "sceneName": "第十六场",
+        "sceneNumber": 16,
+        "sceneCode": "S16",
+        "scriptContent": "景别： 全景\n角度： 高机位俯拍\n画面内容： 程善孤零零站在地窖中央，四周散落符纸残片，显得渺小无助。",
+        "sceneStatus": "",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "智博",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GUzzL",
+        "sceneName": "第十七场",
+        "sceneNumber": 17,
+        "sceneCode": "S17",
+        "scriptContent": "景别： 全景\n角度： 正背，从程善后方仰拍程千秋，带到程善全部背影。\n画面内容： 二人半身，人物后方留出二分之一画面留白。程千秋死死盯着程善，程善神情平静。",
+        "sceneStatus": "",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "灵境",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GpFOy",
+        "sceneName": "第十七场",
+        "sceneNumber": 17,
+        "sceneCode": "S17",
+        "scriptContent": "景别： 全景\n角度： 平视，正侧（同框全景）\n画面内容： 前景为暗红池水。程千秋与程善同框。",
+        "sceneStatus": "",
+        "imageOwner": "灵境",
+        "level": "中等",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "灵境",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GiNcO",
+        "sceneName": "第十八场",
+        "sceneNumber": 18,
+        "sceneCode": "S18",
+        "scriptContent": "景别： 全景\n角度： 微俯\n画面内容： 四人呈对峙站位。孙德贵居中靠前，两名大汉分列其身后两侧，程善站在门边。",
+        "sceneStatus": "",
+        "imageOwner": "黄俊",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recvialZ3GzdQN",
+        "sceneName": "第十八场",
+        "sceneNumber": 18,
+        "sceneCode": "S18",
+        "scriptContent": "景别： 中景\n角度： 平视\n画面内容： 明彩站在程善身前，长剑反手扛在肩上，剑尖斜指地面。她斜睨孙德贵，眼神冷冽。",
+        "sceneStatus": "",
+        "imageOwner": "黄俊",
+        "level": "高难",
+        "imageDoneAt": "1778169600000",
+        "videoOwner": "俊",
+        "videoDoneAt": "1778774400000"
+      },
+      {
+        "rowId": "recviaDaOXiltn",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "",
+        "sceneStatus": "制作中",
+        "imageOwner": "梦涵",
+        "level": "中等",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recviaDl4LewvE",
+        "sceneName": "第四场",
+        "sceneNumber": 4,
+        "sceneCode": "S04",
+        "scriptContent": "",
+        "sceneStatus": "制作中",
+        "imageOwner": "灵境",
+        "level": "简单",
+        "imageDoneAt": "1778256000000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1778169600000"
+      },
+      {
+        "rowId": "recviaGDmNpVFB",
+        "sceneName": "第一场",
+        "sceneNumber": 1,
+        "sceneCode": "S01",
+        "scriptContent": "",
+        "sceneStatus": "新增返修",
+        "imageOwner": "书豪",
+        "level": "",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1777996800000"
+      },
+      {
+        "rowId": "recvib8LpptSo8",
+        "sceneName": "第一场",
+        "sceneNumber": 1,
+        "sceneCode": "S01",
+        "scriptContent": "",
+        "sceneStatus": "新增返修",
+        "imageOwner": "书豪",
+        "level": "",
+        "imageDoneAt": "1777478400000",
+        "videoOwner": "佩佩",
+        "videoDoneAt": "1777996800000"
+      }
+    ]
+  },
+  "sceneAssignments": [
+    {
+      "sceneId": "scene-01",
+      "sceneName": "第一场",
+      "sceneCode": "S01",
+      "sceneNumber": 1,
+      "sceneDescription": "全景，正对告示，微仰拍摄高耸的城墙贴着告示，告示前围着一群农民打扮的百姓。",
+      "sceneType": "高难",
+      "originalOwner": "书豪",
+      "totalShots": 3,
+      "assignments": [
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 3,
+          "confirmed": 1,
+          "revision": 2,
+          "pending": 0
+        },
+        {
+          "owner": "佩佩",
+          "group": "视频制作",
+          "assignedShots": 3,
+          "confirmed": 1,
+          "revision": 2,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 2,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "书豪 3项 / 佩佩 3项",
+      "imageOwners": [
+        "书豪",
+        "书豪",
+        "书豪"
+      ],
+      "videoOwners": [
+        "佩佩",
+        "佩佩",
+        "佩佩"
+      ],
+      "imageDoneAt": "1777219200000",
+      "videoDoneAt": "1777996800000"
+    },
+    {
+      "sceneId": "scene-02",
+      "sceneName": "第二场",
+      "sceneCode": "S02",
+      "sceneNumber": 2,
+      "sceneDescription": "微俯高机位，画左下角挂街对面屋檐，画面重心落在济世堂门头，和沿街排队的百姓。",
+      "sceneType": "高难",
+      "originalOwner": "书豪",
+      "totalShots": 6,
+      "assignments": [
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 4,
+          "confirmed": 2,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "灵境",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "王浩",
+          "group": "视频制作",
+          "assignedShots": 6,
+          "confirmed": 2,
+          "revision": 0,
+          "pending": 4
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 2,
+      "revisionShots": 0,
+      "pendingShots": 4,
+      "deletedShots": 0,
+      "ownerSummary": "书豪 4项 / 灵境 2项 / 王浩 6项",
+      "imageOwners": [
+        "书豪",
+        "书豪",
+        "灵境",
+        "灵境",
+        "书豪",
+        "书豪"
+      ],
+      "videoOwners": [
+        "王浩",
+        "王浩",
+        "王浩",
+        "王浩",
+        "王浩",
+        "王浩"
+      ],
+      "imageDoneAt": "1777392000000",
+      "videoDoneAt": "1778083200000"
+    },
+    {
+      "sceneId": "scene-03",
+      "sceneName": "第三场",
+      "sceneCode": "S03",
+      "sceneNumber": 3,
+      "sceneDescription": "别：远景（高机位前推）\n机位：架设在厢房屋檐上方或对面高处，镜头前推\n角度：俯拍，挂屋檐关系\n画面内容：画面从上往下俯拍后院全景。前景是厢房屋檐的瓦片和椽子，形成画框。后景是厢房紧闭的门窗。刘大夫和两名小厮站在厢房门外，探头探脑，身体贴向窗纸。光线从上方照射，厢房处于阴影中，刘大夫等人的身影在窗纸上投下暗影。",
+      "sceneType": "高难",
+      "originalOwner": "智博",
+      "totalShots": 4,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 2,
+          "pending": 0
+        },
+        {
+          "owner": "灵境",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "王浩",
+          "group": "视频制作",
+          "assignedShots": 4,
+          "confirmed": 0,
+          "revision": 2,
+          "pending": 2
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 2,
+      "pendingShots": 2,
+      "deletedShots": 0,
+      "ownerSummary": "智博 2项 / 灵境 2项 / 王浩 4项",
+      "imageOwners": [
+        "智博",
+        "智博",
+        "灵境",
+        "灵境"
+      ],
+      "videoOwners": [
+        "王浩",
+        "王浩",
+        "王浩",
+        "王浩"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778515200000"
+    },
+    {
+      "sceneId": "scene-04",
+      "sceneName": "第四场",
+      "sceneCode": "S04",
+      "sceneNumber": 4,
+      "sceneDescription": "景别： 全景\n机位： 低位，固定于田埂\n角度： 平视（略带仰视）\n画面内容：夕阳将车影拉长。王芸侧坐于左侧车辕，双脚悬空。后景程善枯坐于干草堆旁，空荡的左袖在风中向后扬起。",
+      "sceneType": "中等",
+      "originalOwner": "书豪",
+      "totalShots": 7,
+      "assignments": [
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "灵境",
+          "group": "图片制作",
+          "assignedShots": 4,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 4
+        },
+        {
+          "owner": "梦涵",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "佩佩",
+          "group": "视频制作",
+          "assignedShots": 7,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 6
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 0,
+      "pendingShots": 6,
+      "deletedShots": 0,
+      "ownerSummary": "书豪 1项 / 灵境 4项 / 梦涵 2项 / 佩佩 7项",
+      "imageOwners": [
+        "书豪",
+        "灵境",
+        "灵境",
+        "梦涵",
+        "灵境",
+        "梦涵",
+        "灵境"
+      ],
+      "videoOwners": [
+        "佩佩",
+        "佩佩",
+        "佩佩",
+        "佩佩",
+        "佩佩",
+        "佩佩",
+        "佩佩"
+      ],
+      "imageDoneAt": "1778256000000",
+      "videoDoneAt": "1778169600000"
+    },
+    {
+      "sceneId": "scene-05",
+      "sceneName": "第五场",
+      "sceneCode": "S05",
+      "sceneNumber": 5,
+      "sceneDescription": "全景，侧拍，微仰，拍摄程善站在灶台前，粥正在煮冒着热气。",
+      "sceneType": "简单",
+      "originalOwner": "灵境",
+      "totalShots": 1,
+      "assignments": [
+        {
+          "owner": "灵境",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 1
+        },
+        {
+          "owner": "佩佩",
+          "group": "视频制作",
+          "assignedShots": 1,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 1
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 1,
+      "deletedShots": 0,
+      "ownerSummary": "灵境 1项 / 佩佩 1项",
+      "imageOwners": [
+        "灵境"
+      ],
+      "videoOwners": [
+        "佩佩"
+      ],
+      "imageDoneAt": "1778256000000",
+      "videoDoneAt": "1778169600000"
+    },
+    {
+      "sceneId": "scene-06",
+      "sceneName": "第六场",
+      "sceneCode": "S06",
+      "sceneNumber": 6,
+      "sceneDescription": "景别： 全景\n机位： 房梁上方\n角度： 俯拍\n画面内容： 程善跪伏于画幅下半部，婉氏佝偻靠坐于床头。",
+      "sceneType": "中等",
+      "originalOwner": "智博",
+      "totalShots": 1,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 0,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "智博 1项 / 智博 1项",
+      "imageOwners": [
+        "智博"
+      ],
+      "videoOwners": [
+        "智博"
+      ],
+      "imageDoneAt": "1778256000000",
+      "videoDoneAt": "1778256000000"
+    },
+    {
+      "sceneId": "scene-07",
+      "sceneName": "第七场",
+      "sceneCode": "S07",
+      "sceneNumber": 7,
+      "sceneDescription": "景别： 全景\n角度： 低机位平拍\n画面内容： 程善打开厨房角落地面上的木板，看向里面。",
+      "sceneType": "中等",
+      "originalOwner": "智博",
+      "totalShots": 1,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 0,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "智博 1项 / 智博 1项",
+      "imageOwners": [
+        "智博"
+      ],
+      "videoOwners": [
+        "智博"
+      ],
+      "imageDoneAt": "1777219200000",
+      "videoDoneAt": "1778256000000"
+    },
+    {
+      "sceneId": "scene-08",
+      "sceneName": "第八场",
+      "sceneCode": "S08",
+      "sceneNumber": 8,
+      "sceneDescription": "景别： 全景\n角度： 仰视\n画面内容： 程善举着油灯站在石阶上方入口处。后景墙面投射出被拉长的黑影。",
+      "sceneType": "中等",
+      "originalOwner": "智博",
+      "totalShots": 5,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 5,
+          "confirmed": 5,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 5,
+          "confirmed": 5,
+          "revision": 0,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 5,
+      "revisionShots": 0,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "智博 5项 / 智博 5项",
+      "imageOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博"
+      ],
+      "videoOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博"
+      ],
+      "imageDoneAt": "1777478400000",
+      "videoDoneAt": "1778515200000"
+    },
+    {
+      "sceneId": "scene-09",
+      "sceneName": "第九场",
+      "sceneCode": "S09",
+      "sceneNumber": 9,
+      "sceneDescription": "景别： 中景\n角度： 平视（侧面）\n画面内容： 程千秋虚脱低垂着头，两侧湿冷黑发如水草般散乱垂落，遮挡大半张脸。",
+      "sceneType": "简单",
+      "originalOwner": "智博",
+      "totalShots": 1,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 0,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "智博 1项 / 智博 1项",
+      "imageOwners": [
+        "智博"
+      ],
+      "videoOwners": [
+        "智博"
+      ],
+      "imageDoneAt": "1777478400000",
+      "videoDoneAt": "1778515200000"
+    },
+    {
+      "sceneId": "scene-10",
+      "sceneName": "第十场",
+      "sceneCode": "S10",
+      "sceneNumber": 10,
+      "sceneDescription": "景别： 全景\n机位： 灯笼上方（挂置）\n角度： 微俯\n画面内容： 前景为灯笼。院中三张方桌错落摆放，肉菜升腾白雾弥漫院落。村民围桌而坐。（明确程善位置即可）",
+      "sceneType": "高难",
+      "originalOwner": "佩佩",
+      "totalShots": 2,
+      "assignments": [
+        {
+          "owner": "佩佩",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 2,
+          "pending": 0
+        },
+        {
+          "owner": "佩佩",
+          "group": "视频制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 2,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 2,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "佩佩 2项 / 佩佩 2项",
+      "imageOwners": [
+        "佩佩",
+        "佩佩"
+      ],
+      "videoOwners": [
+        "佩佩",
+        "佩佩"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778688000000"
+    },
+    {
+      "sceneId": "scene-11",
+      "sceneName": "第十一场",
+      "sceneCode": "S11",
+      "sceneNumber": 11,
+      "sceneDescription": "景别： 特写\n角度： 垂直俯拍\n画面内容： 左侧粗瓷碗边缘，暗红色蛊虫在瓷沿蠕动。右侧泛黄手抄簿册，纸面正中绘有形态完全一致的虫图，程善的右手摆在册子边。",
+      "sceneType": "简单",
+      "originalOwner": "梦涵",
+      "totalShots": 1,
+      "assignments": [
+        {
+          "owner": "梦涵",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        },
+        {
+          "owner": "奇霖",
+          "group": "视频制作",
+          "assignedShots": 1,
+          "confirmed": 1,
+          "revision": 0,
+          "pending": 0
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 1,
+      "revisionShots": 0,
+      "pendingShots": 0,
+      "deletedShots": 0,
+      "ownerSummary": "梦涵 1项 / 奇霖 1项",
+      "imageOwners": [
+        "梦涵"
+      ],
+      "videoOwners": [
+        "奇霖"
+      ],
+      "imageDoneAt": "1777219200000",
+      "videoDoneAt": "1778169600000"
+    },
+    {
+      "sceneId": "scene-12",
+      "sceneName": "第十二场",
+      "sceneCode": "S12",
+      "sceneNumber": 12,
+      "sceneDescription": "景别：全景双人镜头\n机位：架设在程善家院外拍院内\n角度：平视\n画面内容：程善站在门内，王芸站在门外",
+      "sceneType": "中等",
+      "originalOwner": "梦涵",
+      "totalShots": 7,
+      "assignments": [
+        {
+          "owner": "梦涵",
+          "group": "图片制作",
+          "assignedShots": 3,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 3
+        },
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 3,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 3
+        },
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 1
+        },
+        {
+          "owner": "书豪",
+          "group": "视频制作",
+          "assignedShots": 7,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 7
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 7,
+      "deletedShots": 0,
+      "ownerSummary": "梦涵 3项 / 书豪 3项 / 智博 1项 / 书豪 7项",
+      "imageOwners": [
+        "梦涵",
+        "梦涵",
+        "梦涵",
+        "书豪",
+        "书豪",
+        "书豪",
+        "智博"
+      ],
+      "videoOwners": [
+        "书豪",
+        "书豪",
+        "书豪",
+        "书豪",
+        "书豪",
+        "书豪",
+        "书豪"
+      ],
+      "imageDoneAt": "1777478400000",
+      "videoDoneAt": "1778688000000"
+    },
+    {
+      "sceneId": "scene-13",
+      "sceneName": "第十三场",
+      "sceneCode": "S13",
+      "sceneNumber": 13,
+      "sceneDescription": "景别：全景\n机位：架设在旧屋门前，正对程恩和幼年程善\n角度：低角度平视，侧拍\n画面内容：前景是芦苇荡（虚化或剪影），后景是旧屋门前。程恩背着深色行囊，侧身而立，一只手按在幼年程善头顶。暮色沉沉，光线昏暗。两人一站一立，形成高低对比。空间关系清晰：门前空地、芦苇荡、暮色天光。",
+      "sceneType": "中等",
+      "originalOwner": "书豪",
+      "totalShots": 2,
+      "assignments": [
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "书豪",
+          "group": "视频制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 2,
+      "deletedShots": 0,
+      "ownerSummary": "书豪 2项 / 书豪 2项",
+      "imageOwners": [
+        "书豪",
+        "书豪"
+      ],
+      "videoOwners": [
+        "书豪",
+        "书豪"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778774400000"
+    },
+    {
+      "sceneId": "scene-14",
+      "sceneName": "第十四场",
+      "sceneCode": "S14",
+      "sceneNumber": 14,
+      "sceneDescription": "景别：大全景（暗）\n机位：架设在虚空/意识空间中\n角度：平视（全暗画面）\n画面内容：程善坠入的黑暗中，仅有一线极细的暗红光纹在虚空中浮现。光纹随画外音频率震荡，忽明忽暗。周围是无尽的黑暗，光纹是唯一的光源。",
+      "sceneType": "中等",
+      "originalOwner": "智博",
+      "totalShots": 7,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 6,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 6
+        },
+        {
+          "owner": "书豪",
+          "group": "图片制作",
+          "assignedShots": 1,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 1
+        },
+        {
+          "owner": "俊",
+          "group": "视频制作",
+          "assignedShots": 7,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 7
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 7,
+      "deletedShots": 0,
+      "ownerSummary": "智博 6项 / 书豪 1项 / 俊 7项",
+      "imageOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "书豪"
+      ],
+      "videoOwners": [
+        "俊",
+        "俊",
+        "俊",
+        "俊",
+        "俊",
+        "俊",
+        "俊"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778774400000"
+    },
+    {
+      "sceneId": "scene-15",
+      "sceneName": "第十五场",
+      "sceneCode": "S15",
+      "sceneNumber": 15,
+      "sceneDescription": "景别： 中景（程善主观）\n角度： 侧向\n画面内容： 婉氏动作僵硬地停止吮吸，侧背对镜头。芸娘在婉氏怀中，面部腐烂。",
+      "sceneType": "中等",
+      "originalOwner": "智博",
+      "totalShots": 5,
+      "assignments": [
+        {
+          "owner": "智博",
+          "group": "图片制作",
+          "assignedShots": 5,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 5
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 5,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 5
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 5,
+      "deletedShots": 0,
+      "ownerSummary": "智博 5项 / 智博 5项",
+      "imageOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博"
+      ],
+      "videoOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博",
+        "智博"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778774400000"
+    },
+    {
+      "sceneId": "scene-16",
+      "sceneName": "第十六场",
+      "sceneCode": "S16",
+      "sceneNumber": 16,
+      "sceneDescription": "景别： 全景\n角度： 斜侧微俯\n画面内容：村头影壁前，县衙差役正在宣读。六七名村民呈围在旁边听。",
+      "sceneType": "高难",
+      "originalOwner": "佩佩",
+      "totalShots": 4,
+      "assignments": [
+        {
+          "owner": "佩佩",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "梦涵",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "智博",
+          "group": "视频制作",
+          "assignedShots": 4,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 4
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 4,
+      "deletedShots": 0,
+      "ownerSummary": "佩佩 2项 / 梦涵 2项 / 智博 4项",
+      "imageOwners": [
+        "佩佩",
+        "佩佩",
+        "梦涵",
+        "梦涵"
+      ],
+      "videoOwners": [
+        "智博",
+        "智博",
+        "智博",
+        "智博"
+      ],
+      "imageDoneAt": "1778256000000",
+      "videoDoneAt": "1778774400000"
+    },
+    {
+      "sceneId": "scene-17",
+      "sceneName": "第十七场",
+      "sceneCode": "S17",
+      "sceneNumber": 17,
+      "sceneDescription": "景别： 全景\n角度： 正背，从程善后方仰拍程千秋，带到程善全部背影。\n画面内容： 二人半身，人物后方留出二分之一画面留白。程千秋死死盯着程善，程善神情平静。",
+      "sceneType": "中等",
+      "originalOwner": "灵境",
+      "totalShots": 2,
+      "assignments": [
+        {
+          "owner": "灵境",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "灵境",
+          "group": "视频制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 2,
+      "deletedShots": 0,
+      "ownerSummary": "灵境 2项 / 灵境 2项",
+      "imageOwners": [
+        "灵境",
+        "灵境"
+      ],
+      "videoOwners": [
+        "灵境",
+        "灵境"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778774400000"
+    },
+    {
+      "sceneId": "scene-18",
+      "sceneName": "第十八场",
+      "sceneCode": "S18",
+      "sceneNumber": 18,
+      "sceneDescription": "景别： 全景\n角度： 微俯\n画面内容： 四人呈对峙站位。孙德贵居中靠前，两名大汉分列其身后两侧，程善站在门边。",
+      "sceneType": "高难",
+      "originalOwner": "黄俊",
+      "totalShots": 2,
+      "assignments": [
+        {
+          "owner": "黄俊",
+          "group": "图片制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        },
+        {
+          "owner": "俊",
+          "group": "视频制作",
+          "assignedShots": 2,
+          "confirmed": 0,
+          "revision": 0,
+          "pending": 2
+        }
+      ],
+      "shots": [],
+      "confirmedShots": 0,
+      "revisionShots": 0,
+      "pendingShots": 2,
+      "deletedShots": 0,
+      "ownerSummary": "黄俊 2项 / 俊 2项",
+      "imageOwners": [
+        "黄俊",
+        "黄俊"
+      ],
+      "videoOwners": [
+        "俊",
+        "俊"
+      ],
+      "imageDoneAt": "1778169600000",
+      "videoDoneAt": "1778774400000"
+    }
+  ],
+  "reassignOverview": [],
+  "sourceMeta": {
+    "type": "feishu-scene-first",
+    "runtimeOnly": true,
+    "syncedAt": "2026-05-07T03:33:31.293Z",
+    "tableStats": {
+      "storyboardRows": 61,
+      "characterAssets": 49,
+      "sceneAssets": 57,
+      "propAssets": 27
+    }
+  }
+}
